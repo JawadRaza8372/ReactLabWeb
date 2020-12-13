@@ -26,6 +26,26 @@ code {
 .whitecolor {
   color: white;
 }
+.frow {
+  margin-top: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.daba2 {
+  margin-top: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 2px solid black;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: max-content;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
 .backers_section {
   margin: 30px auto 60px;
   max-width: 600px;
