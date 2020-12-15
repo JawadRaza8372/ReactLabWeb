@@ -9,6 +9,7 @@ import {useLocation} from "react-router-dom";
 import ReactNavbar2 from "./ReactNavbar2"
 import SideNav from "./SideNav"
 import Overview from "./OverView"
+import Avatarr from "./Avatarr"
 function NavRoutes(){
     const location =useLocation().pathname;
     return(<>
@@ -22,6 +23,7 @@ function NavRoutes(){
 </Route>
              <Route exact={true} path="/services" component={Service} />
              <Route exact={true} path="/overview" component={Overview} />
+             <Route exact={true} path="/avatarr" component={Avatarr} />
              <Route exact={true} path="/about" component={About}/>
              <Route exact={true} path="/contact" component={Contact}/>
              <Route component={""}/>
@@ -33,6 +35,7 @@ function NavRoutes(){
 </Route>
              <Route exact={true} path="/services" component={Service} />
              <Route exact={true} path="/overview" component={Overview} />
+             <Route exact={true} path="/avatarr" component={Avatarr} />
              <Route exact={true} path="/about" component={About}/>
              <Route exact={true} path="/contact" component={Contact}/>
              <Route component={""}/>

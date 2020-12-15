@@ -26,7 +26,23 @@ function Footer(){
 </div>
 <br/>
 <br/>
-</div></div></section>
+</div></div>
+<br/>
+  <div className="d-flex align-items-center">
+<div className="container-fluid nav-bg">
+    <div className="row">
+<div className="col-2 mx-auto">
+<div className="row">
+<div style={{flexDirection:"row",display:"flex",marginLeft:"10px"}}>
+  <img style={{height:"40px",marginRight: ".5rem",alignSelf:"center"}} alt="logo" src="https://reactnativeelements.com/img/logo-icon.svg"/>
+  <h4 style={{alignSelf:"center",color:"white"}}>React Lab
+  </h4></div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+</section>
         
     </>);
 }

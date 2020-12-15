@@ -1,8 +1,13 @@
 import React,{useState} from 'react'
 import CopyToClipboard from "react-copy-to-clipboard"
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
+import 'highlight.js/styles/github.css';
+import ReactPlayer from 'react-player'
+ 
+function PostCodeTemplate({UseTitle,UsePara,code,code2,imgsrc,children,videoLink}) {
+    hljs.registerLanguage('javascript', javascript);
 
-function PostCodeTemplate({UseTitle,UsePara,code,code2,imgsrc,children}) {
-    
     const [cop, setcop] = useState(false);
 const [btnt, setbtnt] = useState("Copy");
 const [boxx, setboxx] = useState("#e6cccc");
@@ -26,34 +31,44 @@ const [bcol1, setbcol1] = useState("btn btn-outline-primary");
     return (
         <>
       <div className="container px-2 py-2">   
-<header><h1>{UseTitle}</h1></header>
-<p>{UsePara}</p>
+{UseTitle && <header><h1 style={{textTransform:"capitalize"}}>{UseTitle}</h1></header>
+}{UsePara &&<p style={{fontSize:"16px"}}>{UsePara}</p>
+}
 
-
-
-<div className="row">
-<div className="col-md-6 pt-5 pt-lg-0 order-1 order-lg-1 d-flex justify-content-center flex-column">
+<br/>
 {children}
-{code &&<><div className="daba2" style={{backgroundColor:`${boxx}`}}>
-<h7>{code}</h7>
+<br/>
+
+{imgsrc &&         <div className="ml-auto mr-auto" style={{maxWidth:"80%",marginBottom:"45px"}}>
+<br/>
+<img style={{width:"100%",height:"300px",objectFit:"contain"}} src={`${imgsrc}`} alt="pics"/>
+<br/>
+</div>}
+{videoLink && <div className="row">
+<div className="text_center col-md-8 ml-auto mr-auto pt-5 pt-lg-0 d-flex justify-content-center flex-column">
+<ReactPlayer url={videoLink} />
+<br/></div></div>}
+
+{code &&<><div className="daba2 ml-auto mr-auto" style={{backgroundColor:`${boxx}`}}>
+<h7><pre>{code}</pre>
+</h7>
 <br/>
     <CopyToClipboard text={code} onCopy={cop}>
           <button className={bcol} onClick={onCopy}>{btnt}</button>
         </CopyToClipboard>
-</div></>}
-{code2 &&<><div className="daba2" style={{backgroundColor:`${boxx1}`}}>
-<h7>{code2}</h7>
+</div><br/></>}
+
+
+{code2 &&<><div className="daba2  ml-auto mr-auto" style={{backgroundColor:`${boxx1}`}}>
+<br/>
+<h7><pre>{code2}</pre>
+</h7>
 <br/>
     <CopyToClipboard text={code2} onCopy={cop1}>
           <button className={bcol1} onClick={onCopy1}>{btnt1}</button>
         </CopyToClipboard>
-</div></>}
-</div>
-<div className="col-lg-6 order-2 order-lg-2 mt-2 header_img">
-{imgsrc && <img className=" ml-3 img-fluid"  src={imgsrc} alt="pics"/>
-}
-</div>
-</div>
+</div><br/></>}
+<br/>
 </div>
 
          
@@ -62,3 +77,4 @@ const [bcol1, setbcol1] = useState("btn btn-outline-primary");
 }
 
 export default PostCodeTemplate
+

@@ -15,12 +15,9 @@ const MyApp = () => {
       <Button title='Hey!' />
     </ThemeProvider>
   );
-};">
+};" imgsrc="https://picsum.photos/200/300" videoLink="https://youtu.be/HZopzvtEmtY">
 
-<p style={{fontSize:"16px"}}>To customize the theme, or use it within your own components, be sure to check the docs on Customization.
-<br/>
-</p>
-<p style={{fontSize:"16px"}}>But why stop at colours? Why not allow the props of every component to be defined in one central place? And so the idea behind theming with React Native Elements was born!</p>
+<p>To customize the theme, or use it within your own components, be sure to check the docs on Customization.</p>
  </PostCodeTemplate>
       </CodeTemplate>
     </>);

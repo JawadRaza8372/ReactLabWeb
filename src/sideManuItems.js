@@ -1,16 +1,19 @@
  const sideManuItem=[
     {text:"Getting Started",
-path:"/contact"}
+path:"/about",
+name:"staeted"}
     ,
     {text:"Overview",
-    path:`/overview`},
+    path:`/overview`,
+    name:"staeted2"},
       {text:"Customization",
-    path:"/contact"}
+    path:"/contact",
+    name:"staeted3"}
         
 ];
 const sideManuItem2=[
     {text:"Avatar",
-path:"/contact"}
+path:"/avatarr"}
     ,
     {text:"Badge",
     path:`/about`},

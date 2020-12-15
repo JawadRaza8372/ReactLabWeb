@@ -8,7 +8,7 @@ function About(){
     return(<>
       <CodeTemplate title="Getting Started" titlepara={para}>
 <PostCodeTemplate UseTitle="Installation" UsePara="Installing React Native Elements depends on your type of react native project."
- code="yarn add react-native-elements" code2="npm install react-native-elements" imgsrc="https://picsum.photos/200/300">
+ code="yarn add react-native-elements" code2="npm install react-native-elements">
      <ul>
      <li>Expo | Create React Native App</li>
 <li>React Native CLI</li>

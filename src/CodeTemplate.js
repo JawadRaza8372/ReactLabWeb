@@ -8,7 +8,7 @@ function CodeTemplate({title,titlepara,children}) {
             <br/>
             <br/>
 <header><h1>{title}</h1></header>
-<p>{titlepara}</p>
+<p style={{fontSize:"16px"}}>{titlepara}</p>
 {children}
 
 
