@@ -16,7 +16,7 @@ const sideManuItem2=[
 path:"/avatarr"}
     ,
     {text:"Badge",
-    path:`/about`},
+    path:`/badge`},
       {text:"Bottom Sheet",
     path:"/contact"},
     {text:"Button",
