@@ -19,7 +19,7 @@ function Home(){
 <br/>
 <br/>
 <br/>
-<section style={{marginBottom: "70px !important",marginTop: "70px !important"}}>
+<section style={{marginBottom: "70px !important",marginTop: "71px !important"}}>
 <div className="container ml-auto mr-auto">
 <div className="row">
 <div className="col col-10 col-lg-3 col-md-5 col-sm-8 col-xsm-10 mx-auto">
@@ -38,7 +38,7 @@ function Home(){
 <br/>
 <br/>
 <br/>
-<section style={{marginBottom: "5rem!important",marginTop: "5rem!important", marginTop:"15px",marginBottom:"15px"}}>
+<section style={{marginBottom: "5rem!important",marginTop: "6rem!important", }}>
 <div className="container ml-auto mr-auto">
 <div className="col-10 mx-auto">
 <div className="row text-align-center">

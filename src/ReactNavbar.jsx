@@ -1,7 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import {Navbar,Nav} from 'react-bootstrap';
-import AppsIcon from '@material-ui/icons/Apps';
 import "./index.css"
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 function ReactNavbar(){

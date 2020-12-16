@@ -1,7 +1,6 @@
 import React from "react";
 import CodeTemplate from "./CodeTemplate";
 import PostCodeTemplate from "./PostCodeTemplate";
-import Template from "./Template";
 
 function About(){
     let para="This section of the documentation describes the props and examples for all the components from React Native Elements. Please take some time and explore all of the components that are at your disposal!";
@@ -12,7 +11,9 @@ function About(){
 const MyApp = () => {
   return (
     <ThemeProvider>
+
       <Button title='Hey!' />
+      
     </ThemeProvider>
   );
 };">
@@ -23,6 +24,7 @@ const MyApp = () => {
 <p style={{fontSize:"16px"}}>But why stop at colours? Why not allow the props of every component to be defined in one central place? And so the idea behind theming with React Native Elements was born!</p>
  </PostCodeTemplate>
       </CodeTemplate>
+     
     </>);
 }
 export default About;

@@ -1,12 +1,10 @@
-import React,{useState} from "react";
+import React from "react";
 import {NavLink} from "react-router-dom";
 import {Navbar,Nav} from 'react-bootstrap';
 import AppsIcon from '@material-ui/icons/Apps';
-import SideNav from "./SideNav"
 import "./index.css"
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 function ReactNavbar2(props){
-  const [drawer, setdrawer] = useState(false)
 return (<>
  <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
   <Navbar.Brand href="/home"><div style={{flexDirection:"row",display:"flex",marginLeft:"10px"}}>

@@ -1,12 +1,8 @@
 import React,{useState} from 'react'
 import CopyToClipboard from "react-copy-to-clipboard"
-import hljs from 'highlight.js/lib/core';
-import javascript from 'highlight.js/lib/languages/javascript';
-import 'highlight.js/styles/github.css';
 import ReactPlayer from 'react-player'
- 
+
 function PostCodeTemplate({UseTitle,UsePara,code,code2,imgsrc,children,videoLink}) {
-    hljs.registerLanguage('javascript', javascript);
 
     const [cop, setcop] = useState(false);
 const [btnt, setbtnt] = useState("Copy");
@@ -45,13 +41,12 @@ const [bcol1, setbcol1] = useState("btn btn-outline-primary");
 <br/>
 </div>}
 {videoLink && <div className="row">
-<div className="text_center col-md-8 ml-auto mr-auto pt-5 pt-lg-0 d-flex justify-content-center flex-column">
-<ReactPlayer url={videoLink} />
+<div className="text_center col-md-8 col-sm-10 ml-auto mr-auto pt-5 pt-lg-0 d-flex justify-content-center flex-column">
+<ReactPlayer width="100%" url={videoLink} />
 <br/></div></div>}
 
 {code &&<><div className="daba2 ml-auto mr-auto" style={{backgroundColor:`${boxx}`}}>
-<h7><pre>{code}</pre>
-</h7>
+<h6><pre>{code}</pre></h6>
 <br/>
     <CopyToClipboard text={code} onCopy={cop}>
           <button className={bcol} onClick={onCopy}>{btnt}</button>
@@ -61,8 +56,8 @@ const [bcol1, setbcol1] = useState("btn btn-outline-primary");
 
 {code2 &&<><div className="daba2  ml-auto mr-auto" style={{backgroundColor:`${boxx1}`}}>
 <br/>
-<h7><pre>{code2}</pre>
-</h7>
+<h6><pre>{code2}</pre></h6>
+
 <br/>
     <CopyToClipboard text={code2} onCopy={cop1}>
           <button className={bcol1} onClick={onCopy1}>{btnt1}</button>

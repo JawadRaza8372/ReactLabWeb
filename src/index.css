@@ -40,6 +40,7 @@ code {
   padding-right: 35px;
   padding-top: 5px;
   padding-bottom: 5px;
+  overflow: auto;
   width: 100%;
   min-width: 80%;
   align-items: flex-start;
