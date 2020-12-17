@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
 import Founder from "./Founder";
 function Home(){
@@ -9,9 +10,9 @@ function Home(){
 <h1 style={{color:"white",textAlign:"center",fontSize:"3rem",marginBottom:"10px"}}>React Lab</h1>
 <h3 style={{color:"white",textAlign:"center",fontSize:"1.5rem",marginBottom:"10px"}}>Cross Platform React Native UI Toolkit</h3>
 <div style={{display:"flex",flexDirection:"row",justifyItems:"center",margin:"auto",marginBottom:"10px"}}>
-<button to="/about" style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} className="btn btn-outline-light">Get Started</button>
-<button to="/overview" style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} className="btn btn-outline-light">Read Docs</button>
-</div>
+<NavLink style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} to="/about"><button className="btn btn-outline-light">Get Started</button>
+</NavLink><NavLink style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} to="/overview"><button  className="btn btn-outline-light">Read Docs</button>
+</NavLink></div>
 </div>
 </div>
 </section>
