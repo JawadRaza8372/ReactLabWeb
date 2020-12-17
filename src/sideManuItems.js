@@ -18,55 +18,56 @@ path:"/avatarr"}
     {text:"Badge",
     path:`/badge`},
       {text:"Bottom Sheet",
-    path:"/contact"},
+    path:"/bottomSheet"},
     {text:"Button",
-    path:"/contact"}
+    path:"/button"}
         ,
         {text:"ButtonGroup",
-        path:`/about`},
+        path:`/buttonGroup`},
           {text:"Card",
-        path:"/contact"},
+        path:"/card"},
         {text:"CheckBox",
-        path:"/contact"}
+        path:"/checkBox"}
             ,
             {text:"Divider",
-            path:`/about`},
+            path:"/divider"},
               {text:"Header",
-            path:"/contact"},
+            path:"/header" },
             {text:"Icon",
-            path:"/contact"}
+            path:"/icon"}
                 ,
                 {text:"Image",
-                path:`/about`},
+                path:"/image"},
                   {text:"Input",
-                path:"/contact"},
+                path:"/input"},
                 {text:"ListItem",
-                path:"/contact"}
+                path:"/listItem"}
                     ,
                     {text:"Overlay",
-                    path:`/about`},
+                    path:"/overLay"},
                       {text:"Pricing",
-                    path:"/contact"},
+                    path:"/pricing" },
                     {text:"Rating",
-                    path:"/contact"}
+                    path:"/rating" }
                         ,
                         {text:"SearchBar",
-                        path:`/about`},
+                        path:"/searchBar" },
                           {text:"Slider",
-                        path:"/contact"},
+                        path:"/slider"},
                         {text:"SocialIcon",
-                        path:"/contact"}
-                            ,
+                        path:"/socialIcon"}
+                            , 
                             {text:"Text",
-                            path:`/about`},
+                            path:`/text`},
                               {text:"Tile",
-                            path:"/contact"},
+                            path:"/tile"},
                             {text:"Tooltip",
-                            path:"/contact"}
+                            path:"/toolTip"}
                                 ,
-
         
-];
+]; 
+ 
+  
 
 const sideManuItem3=[
     {text:"all",

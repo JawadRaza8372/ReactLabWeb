@@ -9,8 +9,8 @@ function Home(){
 <h1 style={{color:"white",textAlign:"center",fontSize:"3rem",marginBottom:"10px"}}>React Lab</h1>
 <h3 style={{color:"white",textAlign:"center",fontSize:"1.5rem",marginBottom:"10px"}}>Cross Platform React Native UI Toolkit</h3>
 <div style={{display:"flex",flexDirection:"row",justifyItems:"center",margin:"auto",marginBottom:"10px"}}>
-<button style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} className="btn btn-outline-light">Read Docs</button>
-<button style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} className="btn btn-outline-light">Read Docs</button>
+<button to="/about" style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} className="btn btn-outline-light">Get Started</button>
+<button to="/overview" style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} className="btn btn-outline-light">Read Docs</button>
 </div>
 </div>
 </div>
