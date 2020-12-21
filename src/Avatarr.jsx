@@ -3,7 +3,6 @@ import CodeTemplate from "./CodeTemplate";
 import PostCodeTemplate from "./PostCodeTemplate";
 
 function Avatarr({titlell,parar}){
-    console.log(titlell)
     const posts=[{title:"trial",video:"https://youtu.be/RxjEJOvnC78",para:"https://youtu.be/RxjEJOvnC78",code:"https://youtu.be/RxjEJOvnC78",img:"https://picsum.photos/200/300"},
     {title:"trial",video:"https://youtu.be/RxjEJOvnC78",para:"https://youtu.be/RxjEJOvnC78",code:"https://youtu.be/RxjEJOvnC78",img:"https://picsum.photos/200/300"},
     {title:"trial",video:"https://youtu.be/RxjEJOvnC78",para:"https://youtu.be/RxjEJOvnC78",code:"https://youtu.be/RxjEJOvnC78",img:"https://picsum.photos/200/300"},

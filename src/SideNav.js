@@ -12,7 +12,10 @@ import CloseIcon from '@material-ui/icons/Close';
 import sideManuItems from "./sideManuItems"
 import {sideManuItem2,sideManuItem3} from "./sideManuItems"
 import NavLists from './NavLists';
-const drawerWidth = 240;
+import Logo from "./images/logo.png"
+
+const drawerWidth = 250;
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -102,10 +105,9 @@ export default function SideNav({children}) {
         }}
       >
         <div className={classes.drawerHeader}>
-        <div style={{flexDirection:"row",display:"flex",marginLeft:"10px"}}>
-  <img style={{height:"40px",marginRight: ".5rem",alignSelf:"center"}} alt="logo" src="https://reactnativeelements.com/img/logo-icon.svg"/>
-  <h4 style={{alignSelf:"center"}}>React Lab
-  </h4> <IconButton onClick={handleDrawerClose}>
+        <div style={{flexDirection:"row",display:"flex",marginLeft:"15px"}}>
+        <img style={{height:"50px",objectFit:"contain",alignSelf:"center"}} alt="logo" src={Logo}/>
+ <IconButton onClick={handleDrawerClose}>
 <CloseIcon/>
           </IconButton></div>
          
@@ -113,7 +115,7 @@ export default function SideNav({children}) {
         <Divider />
         <NavLists title="It Starts Basic" item={sideManuItems}/>
         <NavLists title="Components" item={sideManuItem2}/>
-        <NavLists title="ReactLab +" item={sideManuItem3}/>
+        <NavLists title="React Lab+" item={sideManuItem3}/>
         
       </Drawer>
       <main

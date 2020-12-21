@@ -6,6 +6,7 @@ import Service from "./Service";
 import Home from "./Home";
 import Overview from "./OverView"
 import Avatarr from "./Avatarr"
+import Others from "./Others"
 import {aavatar,abadge,aBottomSheet,aButton,aButtonGroup,aCard,aCheckBox,aDivider,aHeader,aIcon,aImage,aInput,aListItem,aOverlay,
     aPricing,aRating,aSearchBa,aSlider,aSocialIcon,aText,aTile,aTooltip} from "./CompHeaderDta";
 function Routess() {
@@ -21,6 +22,7 @@ function Routess() {
 </Route>
              <Route exact={true} path="/services" component={Service} />
              <Route exact={true} path="/overview" component={Overview} />
+             <Route exact={true} path="/others" component={Others} />
              <Route exact={true} path="/avatarr" render={() => (<Avatarr titlell={aavatar.title} parar={aavatar.para} />)}/>  
              <Route exact={true} path="/badge" render={() => (<Avatarr titlell={abadge.title} parar={abadge.para}/>)}/>  
              <Route exact={true} path="/bottomSheet" render={() => (<Avatarr titlell={aBottomSheet.title} parar={aBottomSheet.para}/>)}/>  

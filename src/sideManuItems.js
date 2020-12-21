@@ -75,5 +75,67 @@ path:"/others"}
    
         
 ];
+const cate=[
+  {text:"Avatar",
+ }
+      ,
+      {text:"Badge",
+      },
+        {text:"Bottom Sheet",
+      },
+      {text:"Button",
+     }
+          ,
+          {text:"ButtonGroup",
+          },
+            {text:"Card",
+          },
+          {text:"CheckBox",
+          }
+              ,
+              {text:"Divider",
+              },
+                {text:"Header",
+              },
+              {text:"Icon",
+              }
+                  ,
+                  {text:"Image",
+                  },
+                    {text:"Input",
+                  },
+                  {text:"ListItem",
+                  }
+                      ,
+                      {text:"Overlay",
+                      },
+                        {text:"Pricing",
+                      },
+                      {text:"Rating",
+                      }
+                          ,
+                          {text:"SearchBar",
+                          },
+                            {text:"Slider",
+                          },
+                          {text:"SocialIcon",
+                          }
+                              , 
+                              {text:"Text",
+                              },
+                                {text:"Tile",
+                              },
+                              {text:"Tooltip",
+                              }
+                                  ,
+     
+  {text:"Themes",
+},
+{text:"IOT",
+},  {text:"Firebase",
+}
+ 
+      
+];
 export default sideManuItem;
-export {sideManuItem2,sideManuItem3}
+export {sideManuItem2,sideManuItem3,cate}

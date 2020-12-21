@@ -34,10 +34,10 @@ function Footer(){
     <div className="row">
 <div className="col-2 mx-auto">
 <div className="row">
-<div style={{flexDirection:"row",display:"flex",marginLeft:"10px"}}>
+<NavLink to="/home"><div style={{flexDirection:"row",display:"flex",marginLeft:"10px"}}>
   <img style={{height:"40px",marginRight: ".5rem",alignSelf:"center"}} alt="logo" src="https://reactnativeelements.com/img/logo-icon.svg"/>
-  <NavLink to="/home"><h4 style={{alignSelf:"center",color:"white"}}>React Lab
-  </h4></NavLink></div>
+  <h4 style={{alignSelf:"center",color:"white"}}>React Lab
+  </h4></div></NavLink>
 </div>
 </div>
 </div>
