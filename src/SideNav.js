@@ -113,7 +113,7 @@ export default function SideNav({children}) {
         <Divider />
         <NavLists title="It Starts Basic" item={sideManuItems}/>
         <NavLists title="Components" item={sideManuItem2}/>
-        <NavLists title="bye" item={sideManuItem3}/>
+        <NavLists title="ReactLab +" item={sideManuItem3}/>
         
       </Drawer>
       <main

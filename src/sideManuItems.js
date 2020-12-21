@@ -70,13 +70,9 @@ path:"/avatarr"}
   
 
 const sideManuItem3=[
-    {text:"all",
-path:"/contact"}
-    ,
-    {text:"all1",
-    path:`/about`},
-      {text:"all2",
-    path:"/contact"}
+    {text:"Others",
+path:"/others"}
+   
         
 ];
 export default sideManuItem;

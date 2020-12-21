@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function Footer(){
@@ -35,8 +36,8 @@ function Footer(){
 <div className="row">
 <div style={{flexDirection:"row",display:"flex",marginLeft:"10px"}}>
   <img style={{height:"40px",marginRight: ".5rem",alignSelf:"center"}} alt="logo" src="https://reactnativeelements.com/img/logo-icon.svg"/>
-  <h4 style={{alignSelf:"center",color:"white"}}>React Lab
-  </h4></div>
+  <NavLink to="/home"><h4 style={{alignSelf:"center",color:"white"}}>React Lab
+  </h4></NavLink></div>
 </div>
 </div>
 </div>

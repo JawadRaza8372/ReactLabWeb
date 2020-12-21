@@ -16,9 +16,8 @@ return (<>
     <Nav  className="ml-auto">
 
         <NavLink exact activeClassName="active_class"  className="nav-link h6"  to="/home">Home</NavLink>
-        <NavLink exact activeClassName="active_class"    className="nav-link h6"  to="/services">Services</NavLink>
-        <NavLink exact activeClassName="active_class"    className="nav-link h6"  to="/about">About</NavLink>
-        <NavLink exact activeClassName="active_class"    className="nav-link h6"  to="/contact">Contact</NavLink>
+        <NavLink exact activeClassName="active_class"    className="nav-link h6"  to="/overview">Components</NavLink>
+        <NavLink exact activeClassName="active_class"    className="nav-link h6"  to="/about">Docs</NavLink>
     </Nav>
   </Navbar.Collapse>
 </Navbar>
