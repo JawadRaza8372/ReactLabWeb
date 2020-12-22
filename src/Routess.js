@@ -5,6 +5,7 @@ import About from "./About";
 import Service from "./Service";
 import Home from "./Home";
 import Overview from "./OverView"
+import UploadPost from "./UploadPost"
 import Avatarr from "./Avatarr"
 import Others from "./Others"
 import {aavatar,abadge,aBottomSheet,aButton,aButtonGroup,aCard,aCheckBox,aDivider,aHeader,aIcon,aImage,aInput,aListItem,aOverlay,
@@ -20,6 +21,8 @@ function Routess() {
              <Route exact={true} path="/">
     <Redirect to="/home" />
 </Route>
+             <Route exact={true} path="/upload" component={UploadPost} />
+
              <Route exact={true} path="/services" component={Service} />
              <Route exact={true} path="/overview" component={Overview} />
              <Route exact={true} path="/others" component={Others} />

@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import "./index.css";
 import FileUploader from 'react-firebase-file-uploader';
-import {storage,auth, db} from "./FirebaseConfig";
+import {storage,auth, db} from "./FirebaseConfig"
 import { setRef } from '@material-ui/core';
 import {cate} from "./sideManuItems"
 import Template from './Template';
@@ -32,7 +32,8 @@ function UploadPost() {
                 
             }
                            
-const handleUploadSuccess = filename => {
+const handleUploadSuccess = (filename) => {
+  console.log("success");
                         storage.ref("images") 
                           .child(filename)
                           .getDownloadURL()
@@ -45,6 +46,7 @@ setf("done");
 
                       const handleUploadError = error => {
                         console.error(error);
+                        setf(error);
                     };
                     
                     
@@ -66,7 +68,7 @@ setf("done");
   </div>
   <div className="row">
                                 <div className="col-12">
-                                 <select defaultValue={null} onChange={this.handlein} style={{width:"100%",height:"40px",backgroundColor:"#f4f7fa",borderColor:"#ced4da",color:"#495057"}} name="cars" id="category">
+                                 <select defaultValue={null} onChange={handlein} style={{width:"100%",height:"40px",backgroundColor:"#f4f7fa",borderColor:"#ced4da",color:"#495057"}} name="cars" id="category">
                                  <option  disabled>Category</option>
                                 {cate && cate.map((avin)=><option>{avin.text}</option>) }
                                  
@@ -76,7 +78,8 @@ setf("done");
   <br/>
   <div className="form-group">
   <FileUploader className="component"
-            accept='*' name='avatar'
+            accept="image/*"
+            name="avatar"
             randomizeFilename
             storageRef={
               storage.ref("images")
@@ -86,7 +89,7 @@ setf("done");
             onUploadSuccess = {handleUploadSuccess}
             onProgress = {null}
           /></div>
-          <p className="blacksimpletxt">Profile Picture Status:{(fs==="done")?"uploaded":null}</p>
+          <p className="blacksimpletxt">Profile Picture Status:{(fs==="done")?"uploaded":fs}</p>
 
   <br/>
   <button type="submit"  className="btn bttn btn-outline-primary">Upload Post</button>
