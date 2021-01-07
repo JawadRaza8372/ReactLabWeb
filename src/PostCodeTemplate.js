@@ -26,7 +26,7 @@ const [bcol1, setbcol1] = useState("btn btn-outline-primary");
       }
     return (
         <>
-      <div className="container px-2 py-2">   
+      <div className="container  m-auto px-2 py-2">   
 {UseTitle && <header><h1 style={{textTransform:"capitalize"}}>{UseTitle}</h1></header>
 }{UsePara &&<p style={{fontSize:"16px"}}>{UsePara}</p>
 }

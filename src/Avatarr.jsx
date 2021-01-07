@@ -1,17 +1,27 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import CodeTemplate from "./CodeTemplate";
 import PostCodeTemplate from "./PostCodeTemplate";
-
+import {db} from "./FirebaseConfig";
 function Avatarr({titlell,parar}){
-    const posts=[{title:"trial",video:"https://youtu.be/RxjEJOvnC78",para:"https://youtu.be/RxjEJOvnC78",code:"https://youtu.be/RxjEJOvnC78",img:"https://picsum.photos/200/300"},
-    {title:"trial",video:"https://youtu.be/RxjEJOvnC78",para:"https://youtu.be/RxjEJOvnC78",code:"https://youtu.be/RxjEJOvnC78",img:"https://picsum.photos/200/300"},
-    {title:"trial",video:"https://youtu.be/RxjEJOvnC78",para:"https://youtu.be/RxjEJOvnC78",code:"https://youtu.be/RxjEJOvnC78",img:"https://picsum.photos/200/300"},
-    {title:"trial",video:"https://youtu.be/RxjEJOvnC78",para:"https://youtu.be/RxjEJOvnC78",code:"https://youtu.be/RxjEJOvnC78",img:"https://picsum.photos/200/300"}]
-    let para="Avatars are found all over ui design from lists to profile screens. They are commonly used to represent a user and can contain photos, icons, or even text.    ";
+  const [posts,setposts]=useState("");
+  useEffect(()=>{
+    db.collection("posts").onSnapshot((snapshot)=>{
+      setposts(snapshot.docs.map(doc=>(({id:doc.id,post:doc.data()}))))
+    })
+    },[]);
+    console.log(posts);
     return(<>
+    
       <CodeTemplate title={titlell} titlepara={parar}>
       <h1>Usage</h1>
-      {posts && posts.map((avin,index)=>{ return <PostCodeTemplate key={index} UseTitle={avin.title} videoLink={avin.video} UsePara={avin.para} code={avin.code} imgsrc={avin.img}/>})}
+      {posts && posts.map((avin,index)=>{ 
+        if (avin.post.category=== titlell){
+          return <PostCodeTemplate key={index} UseTitle={avin.post.title} videoLink={avin.post.video} UsePara={avin.post.para} code={avin.post.code} imgsrc={avin.post.img}/>
+
+        }
+        else{
+          return null;
+        }})}
       </CodeTemplate>
     </>);
 }
