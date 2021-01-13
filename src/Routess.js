@@ -11,9 +11,6 @@ import Others from "./Others"
 import {aavatar,abadge,aBottomSheet,aButton,aButtonGroup,aCard,aCheckBox,aDivider,aHeader,aIcon,aImage,aInput,aListItem,aOverlay,
     aPricing,aRating,aSearchBa,aSlider,aSocialIcon,aText,aTile,aTooltip} from "./CompHeaderDta";
 function Routess() {
-    const title="try not to make 22 pages just for components"
-    const title2="try not to make 22 pages jjj just for components----"
-
     return (
         <div>
          <Switch>
@@ -22,7 +19,6 @@ function Routess() {
     <Redirect to="/home" />
 </Route>
              <Route exact={true} path="/upload" component={UploadPost} />
-
              <Route exact={true} path="/services" component={Service} />
              <Route exact={true} path="/overview" component={Overview} />
              <Route exact={true} path="/others" component={Others} />
