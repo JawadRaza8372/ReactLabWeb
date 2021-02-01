@@ -15,9 +15,9 @@ return (<>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav  className="ml-auto">
-        <NavLink exact activeClassName="active_class"  className="nav-link h6"  to="/home">Home</NavLink>
-        <NavLink exact activeClassName="active_class"    className="nav-link h6"  to="/overview">Components</NavLink>
-        <NavLink exact activeClassName="active_class"    className="nav-link h6"  to="/about">Docs</NavLink>
+        <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"  className="nav-link h6"  to="/home">Home</NavLink>
+        <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/overview">Components</NavLink>
+        <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/about">Docs</NavLink>
     </Nav>
   </Navbar.Collapse>
 </Navbar>

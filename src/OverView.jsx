@@ -23,7 +23,6 @@ const MyApp = () => {
 </p>
 <p style={{fontSize:"16px"}}>But why stop at colours? Why not allow the props of every component to be defined in one central place? And so the idea behind theming with React Native Elements was born!</p>
  </PostCodeTemplate>
- <button href="/upload">upload</button>
       </CodeTemplate>
      
     </>);

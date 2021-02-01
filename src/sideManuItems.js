@@ -129,10 +129,7 @@ const cate=[
                               }
                                   ,
      
-  {text:"Themes",
-},
-{text:"IOT",
-},  {text:"Firebase",
+  {text:"other",
 }
  
       

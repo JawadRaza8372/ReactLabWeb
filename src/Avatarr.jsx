@@ -9,7 +9,6 @@ function Avatarr({titlell,parar}){
       setposts(snapshot.docs.map(doc=>(({id:doc.id,post:doc.data()}))))
     })
     },[]);
-    console.log(posts);
     return(<>
     
       <CodeTemplate title={titlell} titlepara={parar}>
