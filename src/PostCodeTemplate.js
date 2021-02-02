@@ -56,7 +56,7 @@ const [show1, setShow1] = useState(false);
     <CopyToClipboard text={code} onCopy={cop}>
     <Row>
     
-    <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
+    <Toast onClose={() => setShow(false)} show={show} delay={2000} autohide animation>
 <center>
      <h6 style={{color:"green",marginTop:"20px",marginBottom:"20px"}}>Coppied</h6></center>
     </Toast>
@@ -75,7 +75,7 @@ const [show1, setShow1] = useState(false);
     <CopyToClipboard text={code2} onCopy={cop1}>
     <Row>
     
-        <Toast onClose={() => setShow1(false)} show={show1} delay={3000} autohide>
+        <Toast onClose={() => setShow1(false)} show={show1} delay={2000} autohide animation>
 <center>
          <h6 style={{color:"green",marginTop:"20px",marginBottom:"20px"}}>Coppied</h6></center>
         </Toast>

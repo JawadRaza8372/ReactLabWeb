@@ -1,6 +1,6 @@
  const sideManuItem=[
     {text:"Getting Started",
-path:"/about",
+path:"/docs",
 name:"staeted"}
     ,
     {text:"Overview",

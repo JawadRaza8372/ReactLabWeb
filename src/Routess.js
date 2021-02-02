@@ -2,6 +2,7 @@ import React from 'react'
 import {Route,Switch,Redirect} from "react-router-dom";
 import Contact from "./Contact";
 import About from "./About";
+import AboutPage from "./AboutPage";
 import Service from "./Service";
 import Home from "./Home";
 import Overview from "./OverView"
@@ -44,7 +45,8 @@ function Routess() {
              <Route exact={true} path="/text" render={() => (<Avatarr titlell={aText.title} parar={aText.para}/>)}/>  
              <Route exact={true} path="/tile" render={() => (<Avatarr titlell={aTile.title} parar={aTile.para}/>)}/>  
              <Route exact={true} path="/toolTip" render={() => (<Avatarr titlell={aTooltip.title} parar={aTooltip.para}/>)}/>  
-             <Route exact={true} path="/about" component={About}/>
+             <Route exact={true} path="/docs" component={About}/>
+             <Route exact={true} path="/about" component={AboutPage}/>
              <Route exact={true} path="/contact" component={Contact}/>
              <Route component={""}/>
          </Switch>

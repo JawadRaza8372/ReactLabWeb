@@ -23,7 +23,7 @@ function Footer(){
 
 <div className="col col-10 col-lg-3 col-md-5 col-sm-8 col-xsm-10 mx-auto">
 <h4 className="whitecolor">More</h4>
-<p className="whitecolor">Github</p>
+<p className="whitecolor">About-Us</p>
 </div>
 <br/>
 <br/>

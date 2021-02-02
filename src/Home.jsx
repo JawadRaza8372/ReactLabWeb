@@ -10,7 +10,7 @@ function Home(){
 <h1 style={{color:"white",textAlign:"center",fontSize:"3rem",marginBottom:"10px"}}>React Lab</h1>
 <h3 style={{color:"white",textAlign:"center",fontSize:"1.5rem",marginBottom:"10px"}}>Cross Platform React Native UI Toolkit</h3>
 <div style={{display:"flex",flexDirection:"row",justifyItems:"center",margin:"auto",marginBottom:"10px"}}>
-<NavLink style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} to="/about"><button className="btn btn-outline-light">Get Started</button>
+<NavLink style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} to="/docs"><button className="btn btn-outline-light">Get Started</button>
 </NavLink><NavLink style={{textAlign:"center",marginLeft:"auto",marginRight:"auto"}} to="/overview"><button  className="btn btn-outline-light">Read Docs</button>
 </NavLink></div>
 </div>

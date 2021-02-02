@@ -20,7 +20,9 @@ return (<>
 
     <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"  className="nav-link h6"  to="/home">Home</NavLink>
         <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/overview">Components</NavLink>
-        <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/about">Docs</NavLink>
+        <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/docs">Docs</NavLink>
+        <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/about">About</NavLink>
+
     </Nav>
   </Navbar.Collapse>
 </Navbar>
