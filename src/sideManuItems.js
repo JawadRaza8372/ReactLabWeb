@@ -129,7 +129,7 @@ const cate=[
                               }
                                   ,
      
-  {text:"other",
+  {text:"Other",
 }
  
       

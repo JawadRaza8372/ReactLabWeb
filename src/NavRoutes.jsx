@@ -3,6 +3,7 @@ import ReactNavbar from "./ReactNavbar";
 
 import {useLocation} from "react-router-dom";
 import SideNav from "./SideNav"
+import SideNavTest from "./SideNavTest"
 import Routess from "./Routess";
 
 function NavRoutes(){
@@ -13,10 +14,18 @@ function NavRoutes(){
 {(location.match("/home"|| "/"))?
   <> <ReactNavbar/>
   <Routess/>
-  </>:<SideNav>
+  </>:(location.match("/about"))?
+  <> <ReactNavbar/>
+  <Routess/>
+  </>:(location.match("/upload"))?
+  <> <ReactNavbar/>
+  <Routess/>
+  </>:
+  <SideNavTest>
   <Routess/>
 
-   </SideNav>
+   </SideNavTest>
+
 }
          
 

@@ -3,7 +3,7 @@ import CodeTemplate from "./CodeTemplate";
 import PostCodeTemplate from "./PostCodeTemplate";
 import {db} from "./FirebaseConfig";
 function Others(){
-  const titlell="other";
+  const titlell="Other";
   const [posts,setposts]=useState("");
   useEffect(()=>{
     db.collection("posts").onSnapshot((snapshot)=>{

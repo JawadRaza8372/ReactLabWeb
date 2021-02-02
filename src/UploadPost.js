@@ -14,7 +14,7 @@ function UploadPost() {
     let location =useHistory();
     let [filef,setfilf]=useState("");
     const [rex, setR] = useState(false)
-    const [fimg,setfimg]=useState("https://picsum.photos/200/300");
+    const [fimg,setfimg]=useState(null);
 let constt="";
     const handlein=(e)=>{
         const name=e.target.id;
@@ -108,8 +108,8 @@ console.log("success");      setfimg(url);setf("success")
         
 <input type="file" onChange={fileSelector}/>
  
-  <img style={{width:"100%",height:"300px",objectFit:"contain"}} src={`${fimg}`} alt="pjo"/>
- 
+{ fimg && <img style={{width:"100%",height:"300px",objectFit:"contain"}} src={`${fimg}`} alt="pjo"/>
+} 
  {fs &&<> <br/><p style={{textAlign:"center",color:"green"}}>Image Uploaded</p></> }
  
   </div>

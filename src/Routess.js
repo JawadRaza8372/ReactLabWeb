@@ -15,7 +15,8 @@ function Routess() {
     return (
         <div>
          <Switch>
-             <Route exact exact={true} path="/home" component={Home}/>
+             <Route exact={true} path="/home" component={Home}/>
+             <Route exact={true} path="/about" component={AboutPage}/>
              <Route exact={true} path="/">
     <Redirect to="/home" />
 </Route>
@@ -46,7 +47,6 @@ function Routess() {
              <Route exact={true} path="/tile" render={() => (<Avatarr titlell={aTile.title} parar={aTile.para}/>)}/>  
              <Route exact={true} path="/toolTip" render={() => (<Avatarr titlell={aTooltip.title} parar={aTooltip.para}/>)}/>  
              <Route exact={true} path="/docs" component={About}/>
-             <Route exact={true} path="/about" component={AboutPage}/>
              <Route exact={true} path="/contact" component={Contact}/>
              <Route component={""}/>
          </Switch>
