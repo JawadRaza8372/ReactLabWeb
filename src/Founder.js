@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Founder({name,src,rank}) {
+export default function Founder({name,src,rank,skill,exper,portfolio,githubl}) {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
@@ -40,6 +40,12 @@ export default function Founder({name,src,rank}) {
       <CardContent>
 <h3>{name}</h3>
 <h6>{rank}</h6>
+<h6>Skills:{skill}</h6>
+<h6>Experience:{exper}</h6>
+<h6>GitHub:{githubl}</h6>
+<h6>Portfolio:{portfolio}</h6>
+
+
       </CardContent>
       
       

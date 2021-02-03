@@ -12,8 +12,10 @@ function Footer(){
     <br/>
 <div className="col col-10 col-lg-3 col-md-5 col-sm-8 col-xsm-10 mx-auto">
 <h4 className="whitecolor">Docs</h4>
-<p className="whitecolor">Getting Started</p>
-<p className="whitecolor">Components</p>
+<NavLink to="/docs">
+<p className="whitecolor">Getting Started</p></NavLink>
+<NavLink to="/overview">
+<p className="whitecolor">Components</p></NavLink>
 </div>
 <div className="col col-10 col-lg-3 col-md-5 col-sm-8 col-xsm-10 mx-auto">
 <h4 className="whitecolor">Community</h4>
@@ -23,7 +25,8 @@ function Footer(){
 
 <div className="col col-10 col-lg-3 col-md-5 col-sm-8 col-xsm-10 mx-auto">
 <h4 className="whitecolor">More</h4>
-<p className="whitecolor">About-Us</p>
+<NavLink to="/about">
+<p className="whitecolor">About-Us</p></NavLink>
 </div>
 <br/>
 <br/>

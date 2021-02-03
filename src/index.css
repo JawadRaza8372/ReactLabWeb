@@ -59,6 +59,7 @@ code {
   align-items: center;
   background-color: #2089dc;
   color: #444950;
+  height: 50vh;
   color: var(--ifm-hero-text-color);
   display: flex;
   padding: 4rem 2rem;

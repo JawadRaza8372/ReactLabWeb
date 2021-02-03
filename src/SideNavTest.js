@@ -9,6 +9,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Logo from "./images/logo.png"
 import NavLists from './NavLists';
 import ReactNavbar from "./ReactNavbar"
+import Footer from './Footer';
 function SideNavTest({children}) {
   return (
     <>
@@ -22,7 +23,7 @@ function SideNavTest({children}) {
 <div style={{display:"flex",flexDirection:"column"}}>
 <div style={{display:"flex",flexDirection:"row",paddingTop:"10px"}}>
 <Navbar.Brand href="/home">
-  <h5>Create Something New</h5>
+  <h5 style={{color:"#3578e5"}}>Create Something New</h5>
 </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 </div>
@@ -49,7 +50,8 @@ function SideNavTest({children}) {
         </div>
       </div>
     </div>
-    </div></>
+    </div>
+    </>
   )
 }
 
