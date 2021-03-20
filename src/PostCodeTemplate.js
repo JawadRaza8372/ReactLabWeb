@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import CopyToClipboard from "react-copy-to-clipboard"
 import ReactPlayer from 'react-player'
 import {Row,Col,Toast,Button} from "react-bootstrap"
+import { AnimatePresence,motion } from 'framer-motion';
 function PostCodeTemplate({UseTitle,UsePara,code,code2,imgsrc,children,videoLink}) {
 
     const [cop, setcop] = useState(false);
@@ -56,9 +57,10 @@ const [show1, setShow1] = useState(false);
     <CopyToClipboard text={code} onCopy={cop}>
     <Row>
     
+
     <Toast onClose={() => setShow(false)} show={show} delay={2000} autohide animation>
 <center>
-     <h6 style={{color:"green",marginTop:"20px",marginBottom:"20px"}}>Coppied</h6></center>
+     <h6  style={{color:"green",marginTop:"20px",marginBottom:"20px"}}>Coppied</h6></center>
     </Toast>
 
   <Col xs={6}>
@@ -74,12 +76,10 @@ const [show1, setShow1] = useState(false);
 <br/>
     <CopyToClipboard text={code2} onCopy={cop1}>
     <Row>
-    
-        <Toast onClose={() => setShow1(false)} show={show1} delay={2000} autohide animation>
+        <Toast  onClose={() => setShow1(false)} show={show1} delay={2000} autohide animation>
 <center>
          <h6 style={{color:"green",marginTop:"20px",marginBottom:"20px"}}>Coppied</h6></center>
         </Toast>
-  
       <Col xs={6}>
         <Button  onClick={onCopy1}>Copy</Button>
       </Col>

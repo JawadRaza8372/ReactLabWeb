@@ -8,7 +8,6 @@ import Routess from "./Routess";
 
 function NavRoutes(){
     const location =useLocation().pathname;
-    console.log(location)
     return(<>
     
 {(location.match("/home"|| "/"))?

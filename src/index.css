@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.maincolor {
+  color: #2089dc;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -57,7 +59,11 @@ code {
 }
 .hero {
   align-items: center;
-  background-color: #2089dc;
+  /* background-color: #2089dc; */
+  background: linear-gradient(#2089dc, #79b6e4),
+    url("https://s.clipartkey.com/mpngs/s/300-3002441_read-the-military-react-native-logo-white-react.png");
+  background-repeat: no-repeat;
+  background-position: center;
   color: #444950;
   height: 50vh;
   color: var(--ifm-hero-text-color);

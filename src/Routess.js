@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route,Switch,Redirect} from "react-router-dom";
+import {Route,Switch,Redirect,useLocation} from "react-router-dom";
 import Contact from "./Contact";
 import About from "./About";
 import AboutPage from "./AboutPage";
@@ -11,10 +11,13 @@ import Avatarr from "./Avatarr"
 import Others from "./Others"
 import {aavatar,abadge,aBottomSheet,aButton,aButtonGroup,aCard,aCheckBox,aDivider,aHeader,aIcon,aImage,aInput,aListItem,aOverlay,
     aPricing,aRating,aSearchBa,aSlider,aSocialIcon,aText,aTile,aTooltip} from "./CompHeaderDta";
+import { AnimatePresence } from 'framer-motion';
 function Routess() {
+    const location=useLocation();
+    console.log(location);
     return (
-        <div>
-         <Switch>
+        <AnimatePresence>
+         <Switch location={location} key={location.key}>
              <Route exact={true} path="/home" component={Home}/>
              <Route exact={true} path="/about" component={AboutPage}/>
              <Route exact={true} path="/">
@@ -50,7 +53,7 @@ function Routess() {
              <Route exact={true} path="/contact" component={Contact}/>
              <Route component={""}/>
          </Switch>
-        </div>
+        </AnimatePresence>
     )
 }
 
