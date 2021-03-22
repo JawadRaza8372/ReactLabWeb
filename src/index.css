@@ -60,8 +60,7 @@ code {
 .hero {
   align-items: center;
   /* background-color: #2089dc; */
-  background: linear-gradient(#2089dc, #79b6e4),
-    url("https://s.clipartkey.com/mpngs/s/300-3002441_read-the-military-react-native-logo-white-react.png");
+  background: linear-gradient(#2089dc, #79b6e4);
   background-repeat: no-repeat;
   background-position: center;
   color: #444950;

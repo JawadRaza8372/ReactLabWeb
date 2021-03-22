@@ -25,6 +25,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+
   },
   media: {
     height: 0,
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DeveloperCard() {
+export default function DeveloperCard({name,role,href1,href2,href3,href4}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -54,7 +55,7 @@ export default function DeveloperCard() {
   };
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={{    background: "linear-gradient(#2089dc, #79b6e4)",borderRadius:"25px",padding:"10px"}}>
      <center>
           <Avatar aria-label="recipe" src="https://static.toiimg.com/photo/76729750.cms" className={classes.avatar}>
             R
@@ -62,27 +63,27 @@ export default function DeveloperCard() {
         </center>
        
 
-            <center>
+            
     <CardContent>
-    <h2>Name</h2>
-    <h4>Role</h4>
-        </CardContent></center>
+    <h2>{name}</h2>
+    <h4 style={{color:"white"}}>{role}</h4>
+        </CardContent>
 
 
       <CardActions disableSpacing>
 
 
 
-        <IconButton aria-label="add to favorites">
+        <IconButton href={href1} aria-label="add to favorites">
           <FacebookIcon />
         </IconButton>
-        <IconButton aria-label="share">
+        <IconButton href={href2} aria-label="share">
           <InstagramIcon />
         </IconButton>
-        <IconButton aria-label="add to favorites">
+        <IconButton href={href3} aria-label="add to favorites">
           <LinkedInIcon />
         </IconButton>
-        <IconButton aria-label="share">
+        <IconButton href={href4} aria-label="share">
           <GitHubIcon />
         </IconButton>
 

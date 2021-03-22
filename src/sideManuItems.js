@@ -134,5 +134,8 @@ const cate=[
  
       
 ];
+const founder={name:"Jawad",role:"Co-Founder",href1:"",href2:"",href3:"",href4:""}
+const founder2={name:"Umer",role:"Founder",href1:"",href2:"",href3:"",href4:""}
+
 export default sideManuItem;
-export {sideManuItem2,sideManuItem3,cate}
+export {sideManuItem2,sideManuItem3,cate,founder,founder2}
