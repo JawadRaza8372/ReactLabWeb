@@ -7,7 +7,7 @@ function CodeTemplate({title,titlepara,children}) {
                         <div className="container px-4 py-2">
             <br/>
             <br/>
-<header><h1>{title}</h1></header>
+<header><h1 className="maincolor">{title}</h1></header>
 <p style={{fontSize:"16px"}}>{titlepara}</p>
 {children}
 

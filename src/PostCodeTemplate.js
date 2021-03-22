@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player'
 import {Row,Col,Toast,Button} from "react-bootstrap"
 import { AnimatePresence,motion } from 'framer-motion';
 function PostCodeTemplate({UseTitle,UsePara,code,code2,imgsrc,children,videoLink}) {
+  const btnHover={hovers:{scale:1.2,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
 
     const [cop, setcop] = useState(false);
 const [btnt, setbtnt] = useState("Copy");
@@ -33,7 +34,7 @@ const [show1, setShow1] = useState(false);
     return (
         <>
       <div className="container  m-auto px-2 py-2">   
-{UseTitle && <header><h1 style={{textTransform:"capitalize"}}>{UseTitle}</h1></header>
+{UseTitle && <header><h1 className="maincolor" style={{textTransform:"capitalize"}}>{UseTitle}</h1></header>
 }{UsePara &&<p style={{fontSize:"16px"}}>{UsePara}</p>
 }
 
@@ -64,7 +65,7 @@ const [show1, setShow1] = useState(false);
     </Toast>
 
   <Col xs={6}>
-    <Button  onClick={onCopy}>Copy</Button>
+    <motion.div   variants={btnHover} whileHover="hovers" ><Button  onClick={onCopy}>Copy</Button></motion.div>
   </Col>
 </Row>
         </CopyToClipboard>
@@ -81,7 +82,7 @@ const [show1, setShow1] = useState(false);
          <h6 style={{color:"green",marginTop:"20px",marginBottom:"20px"}}>Coppied</h6></center>
         </Toast>
       <Col xs={6}>
-        <Button  onClick={onCopy1}>Copy</Button>
+      <motion.div   variants={btnHover} whileHover="hovers" ><Button  onClick={onCopy}>Copy</Button></motion.div>
       </Col>
     </Row>
         </CopyToClipboard>

@@ -10,7 +10,12 @@ import Logo from "./images/logo.png"
 import NavLists from './NavLists';
 import ReactNavbar from "./ReactNavbar"
 import Footer from './Footer';
+import {motion} from "framer-motion"
+
 function SideNavTest({children}) {
+  const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:3,duration:3}}};
+const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
+
   return (
     <>
      <ReactNavbar/>
@@ -23,7 +28,7 @@ function SideNavTest({children}) {
 <div style={{display:"flex",flexDirection:"column"}}>
 <div style={{display:"flex",flexDirection:"row",paddingTop:"10px"}}>
 <Navbar.Brand href="/home">
-  <h5 style={{color:"#3578e5"}}>Create Something New</h5>
+  <motion.h5 style={{color:"#3578e5"}}  variants={btnHover} whileHover="hovers" >Create Something New</motion.h5>
 </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 </div>

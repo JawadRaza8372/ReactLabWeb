@@ -16,7 +16,7 @@ function Routess() {
     const location=useLocation();
     console.log(location);
     return (
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
          <Switch location={location} key={location.key}>
              <Route exact={true} path="/home" component={Home}/>
              <Route exact={true} path="/about" component={AboutPage}/>
