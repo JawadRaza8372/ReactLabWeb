@@ -1,12 +1,12 @@
 import firebase from "firebase";
 var firebaseConfig = {
-apiKey: "AIzaSyDuuwCx5OMjfYbiMWQzo84orO07eJZoEvo",
-    authDomain: "reactlab-1b606.firebaseapp.com",
-    projectId: "reactlab-1b606",
-    storageBucket: "reactlab-1b606.appspot.com",
-    messagingSenderId: "241745355751",
-    appId: "1:241745355751:web:c6df8412c4a63d98c49342",
-    measurementId: "G-2K2YJLMMBF"
+  apiKey: "AIzaSyDFk6vTsc8mtFhcqQGym6XrWoRAo-gKgCo",
+  authDomain: "reactlab-7d25f.firebaseapp.com",
+  projectId: "reactlab-7d25f",
+  storageBucket: "reactlab-7d25f.appspot.com",
+  messagingSenderId: "311471154897",
+  appId: "1:311471154897:web:0e4c85f6301754490347f0",
+  measurementId: "G-CPLZEMJRT6"
   };
   
  const FirebaseApp= firebase.initializeApp(firebaseConfig);
