@@ -89,8 +89,8 @@ console.log("success");      setfimg(url);setf("success")
                                                   
                                       
                                             {rex && <Redirect push to="/home"/>}
-                                              <form style={{ width:"40%",maxHeight:"80vh",overflowY:"auto",backgroundColor:"white",padding:"20px",margintop:"20px",borderRadius:"25px"}} onSubmit={submit}>
-                                      <h1 className="blacksimpletxt" style={{color:"#2089dc",textAlign:"center"}}>Upload Component</h1><br/>
+                                              <form style={{ width:"40%",maxHeight:"80vh",overflowY:"auto",backgroundColor:"white",padding:"20px",margintop:"25px",borderRadius:"25px"}} onSubmit={submit}>
+                                      <h2 className="blacksimpletxt" style={{color:"#2089dc",textAlign:"center"}}>Upload Component</h2><br/>
                                       <div className="form-group mb-3">
                                           <input type="text" className="form-control" style={{border:"2px solid #2089dc",color:"#2089dc"}} onChange={handlein} id="title" autoComplete="off" placeholder="Title" required/>
                                         </div>
@@ -117,7 +117,7 @@ console.log("success");      setfimg(url);setf("success")
                                               
                                       <input type="file"  style={{color:"#2089dc"}}  onChange={fileSelector}/>
                                        
-                                      { fimg && <img style={{width:"100%",height:"180px",objectFit:"contain"}} src={`${fimg}`} alt="pjo"/>
+                                      { fimg && <img style={{width:"100%",height:"100px",objectFit:"contain"}} src={`${fimg}`} alt="pjo"/>
                                       } 
                                        {(fs)? <> <br/><p style={{textAlign:"center",color:"green"}}>Image Uploaded</p></>:<p>Select Image For Preview</p> }
                                        

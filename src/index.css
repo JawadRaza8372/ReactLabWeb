@@ -54,6 +54,22 @@ code {
   margin: 30px auto 60px;
   max-width: 600px;
 }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #79b6e4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2089dc;
+}
 .text_center {
   text-align: center;
 }
