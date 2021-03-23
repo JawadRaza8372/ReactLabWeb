@@ -11,8 +11,8 @@ const Paravarients2={init:{y:"-50vw",x:'100vw'},anim:{x:0,y:0,transition:{durati
 const Paravarients3={init:{y:"50vw",x:'-100vw'},anim:{x:0,y:0,transition:{duration:2,delay:3.5}}};
 const Paravarients4={init:{y:"50vw",x:'100vw'},anim:{x:0,y:0,transition:{duration:2,delay:4.5}}};
 const exitDiv={animat:{x:"-100vw",transition:{duration:1,ease:"easeInOut"}}};
-const textvarients2={init1:{y:'-100vw'},anim1:{y:0,transition:{delay:2,duration:2}}};
-const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:3,duration:3}}};
+const textvarients2={init1:{y:'-100vw'},anim1:{y:0,transition:{delay:1.5,duration:2}}};
+const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:2,duration:2}}};
 const btnHover={hovers:{scale:1.3,textShadow:"0px 0px 8px rgb(255,255,255)",boxShadow:"0px 0px 8px black",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
 function Home(){
     return(<motion.div variants={exitDiv} exit="animat">

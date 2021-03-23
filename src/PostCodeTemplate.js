@@ -52,7 +52,7 @@ const [show1, setShow1] = useState(false);
 <ReactPlayer width="100%" url={videoLink} />
 <br/></div></div>}
 
-{code &&<><div className="daba2 ml-auto mr-auto" style={{backgroundColor:"#f5f7f5"}}>
+{code &&<><div className="daba2 ml-auto mr-auto"  style={{backgroundColor:"#f5f7f5",border:"2px solid #2089dc"}}>
 <h6><pre>{code}</pre></h6>
 <br/>
     <CopyToClipboard text={code} onCopy={cop}>
@@ -70,12 +70,12 @@ const [show1, setShow1] = useState(false);
 </Row>
         </CopyToClipboard>
 </div><br/></>}
-{code2 &&<><div className="daba2  ml-auto mr-auto" style={{backgroundColor:"#f5f7f5"}}>
+{code2 &&<><div className="daba2  ml-auto mr-auto" style={{backgroundColor:"#f5f7f5",border:"2px solid #2089dc"}}>
 <br/>
 <h6><pre>{code2}</pre></h6>
 
 <br/>
-    <CopyToClipboard text={code2} onCopy={cop1}>
+    <CopyToClipboard  text={code2} onCopy={cop1}>
     <Row>
         <Toast  onClose={() => setShow1(false)} show={show1} delay={2000} autohide animation>
 <center>
