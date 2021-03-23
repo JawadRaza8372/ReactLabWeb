@@ -57,12 +57,14 @@ code {
 .text_center {
   text-align: center;
 }
+.herobg {
+  background: linear-gradient(#2089dc, #79b6e4);
+  padding: 4rem 2rem;
+}
 .hero {
   align-items: center;
   /* background-color: #2089dc; */
   background: linear-gradient(#2089dc, #79b6e4);
-  background-repeat: no-repeat;
-  background-position: center;
   color: #444950;
   height: 50vh;
   color: var(--ifm-hero-text-color);

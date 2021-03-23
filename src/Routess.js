@@ -9,21 +9,24 @@ import Overview from "./OverView"
 import UploadPost from "./UploadPost"
 import Avatarr from "./Avatarr"
 import Others from "./Others"
+import Login from "./Login"
+
 import {aavatar,abadge,aBottomSheet,aButton,aButtonGroup,aCard,aCheckBox,aDivider,aHeader,aIcon,aImage,aInput,aListItem,aOverlay,
     aPricing,aRating,aSearchBa,aSlider,aSocialIcon,aText,aTile,aTooltip} from "./CompHeaderDta";
 import { AnimatePresence } from 'framer-motion';
-function Routess() {
+function Routess({userStatus}) {
     const location=useLocation();
     console.log(location);
     return (
         <AnimatePresence exitBeforeEnter>
          <Switch location={location} key={location.key}>
              <Route exact={true} path="/home" component={Home}/>
+             <Route exact={true} path="/login" render={() => (<Login rexx={userStatus} />)}/>
              <Route exact={true} path="/about" component={AboutPage}/>
              <Route exact={true} path="/">
     <Redirect to="/home" />
 </Route>
-             <Route exact={true} path="/upload" component={UploadPost} />
+             <Route exact={true} path="/upload" render={() => (<UploadPost rexx={userStatus} />)} />
              <Route exact={true} path="/services" component={Service} />
              <Route exact={true} path="/overview" component={Overview} />
              <Route exact={true} path="/others" component={Others} />

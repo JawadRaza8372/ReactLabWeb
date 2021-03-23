@@ -12,13 +12,13 @@ import ReactNavbar from "./ReactNavbar"
 import Footer from './Footer';
 import {motion} from "framer-motion"
 
-function SideNavTest({children}) {
+function SideNavTest({userStatus,children}) {
   const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:3,duration:3}}};
 const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
 
   return (
     <>
-     <ReactNavbar/>
+     <ReactNavbar userStatus={userStatus}/>
     <div style={{backgroundColor:"white",display:"flex",flexDirection:"row",justifyContent:"center",overflow:"hidden"}}>
     <div className="col-12">
       <div className="row">

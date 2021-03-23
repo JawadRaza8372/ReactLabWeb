@@ -8,7 +8,7 @@ import { setRef } from '@material-ui/core';
 import {cate} from "./sideManuItems"
 import Template from './Template';
 import FileUploaderModule from './FileUploaderModule';
-function UploadPost() {
+function UploadPost({rexx}) {
     const [state, setstate] = useState({title:null,img:null,video:null,para:null,code:null,category:null});
     const [fs,setf]=useState(null);
     let location =useHistory();
@@ -30,16 +30,23 @@ let constt="";
                 e.preventDefault();
         console.log(state);
 
-                    db.collection('posts').add({
-                       title:state.title,
-                       video:state.video,
-                       para:state.para,
-                       code:state.code,
-                        img:state.img,
-                        category:state.category
-                    }).then(()=>{console.log("------datasaved--posted---"); 
-                     setR(true)
-                    });
+        if(state.category){
+          db.collection('posts').add({
+            title:state.title,
+            video:state.video,
+            para:state.para,
+            code:state.code,
+             img:state.img,
+             category:state.category
+         }).then(()=>{console.log("------datasaved--posted---"); 
+          setR(true)
+         });
+        }
+        else{
+          alert("Category Is Not Selected ")
+        }
+
+                 
              
            
               
@@ -74,57 +81,70 @@ console.log("success");      setfimg(url);setf("success")
                                    
                                           };  
                                           
+                                          if (rexx)
+                                           {return(
+                                            <Template>
+                                                  
+                                      
+                                            {rex && <Redirect push to="/home"/>}
+                                              <form className="herobg" style={{border:"2px solid #3578e5",padding:"20px",margintop:"20px"}} onSubmit={submit}>
+                                      <h1 className="blacksimpletxt" style={{color:"white",textAlign:"center"}}>Upload Component</h1><br/>
+                                      <div className="form-group mb-3">
+                                          <input type="text" className="form-control" onChange={handlein} id="title" autoComplete="off" placeholder="Title" required/>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                          <textarea type="text" className="form-control" onChange={handlein} id="para" autoComplete="off" placeholder="Description"  required/>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                          <textarea type="text" className="form-control" onChange={handlein} id="code" autoComplete="off" placeholder="Code"/>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                          <input  type="text" className="form-control" onChange={handlein} id="video" autoComplete="off" placeholder="Video Link"/>
+                                        </div>
+                                        <div className="row mb-3">
+                                                                      <div className="col-12">
+                                                                       <select defaultValue="Category" onChange={handlein} style={{width:"100%",height:"40px",backgroundColor:"#f4f7fa",borderColor:"#ced4da",color:"#495057"}} name="cars" id="category">
+                                                                       <option  disabled>Category</option>
+                                                                      {cate && cate.map((avin)=><option  className="maincolor" >{avin.text}</option>) }
+                                                                       
+                                                                       </select></div></div><br/>
+                                                                      
+                                       
+                                        <div className="form-group mb-3">
+                                      
+                                              
+                                      <input type="file" onChange={fileSelector}/>
+                                       
+                                      { fimg && <img style={{width:"100%",height:"300px",objectFit:"contain"}} src={`${fimg}`} alt="pjo"/>
+                                      } 
+                                       {(fs)? <> <br/><p style={{textAlign:"center",color:"green"}}>Image Uploaded</p></>:<p>Select Image For Preview</p> }
+                                       
+                                        </div>
+                                                
+                                      
+                                        <button type="submit"  className="btn bttn btn-outline-light">Upload Post</button>
+                                      </form>
+                                      <br/><br/>
+                                      
+                                      <br/><br/>
+                                      <br/><br/>
+                                      
+                                      </Template>
+                                          )}
+                                          else
+                                          {return (<Redirect push to="/login"/>)}        
                     
-                    
-    return (
-      <Template>
-      {rex && <Redirect push to="/home"/>}
-        <form onSubmit={submit}>
-<h1 className="blacksimpletxt" style={{color:"#0d6efd",textAlign:"center"}}>Share Your Memories</h1><br/>
-<div className="form-group mb-3">
-    <input type="text" className="form-control" onChange={handlein} id="title" autoComplete="off" placeholder="Title"/>
-  </div>
-  <div className="form-group mb-3">
-    <input type="text" className="form-control" onChange={handlein} id="para" autoComplete="off" placeholder="Description"/>
-  </div>
-  <div className="form-group mb-3">
-    <input type="text" className="form-control" onChange={handlein} id="code" autoComplete="off" placeholder="Code"/>
-  </div>
-  <div className="form-group mb-3">
-    <input type="text" className="form-control" onChange={handlein} id="video" autoComplete="off" placeholder="Video Link"/>
-  </div>
-  <div className="row mb-3">
-                                <div className="col-12">
-                                 <select defaultValue="Category" onChange={handlein} style={{width:"100%",height:"40px",backgroundColor:"#f4f7fa",borderColor:"#ced4da",color:"#495057"}} name="cars" id="category">
-                                 <option  disabled>Category</option>
-                                {cate && cate.map((avin)=><option>{avin.text}</option>) }
-                                 
-                                 </select></div></div><br/>
-                                
- 
-  <br/>
-  <div className="form-group mb-3">
+    
 
-        
-<input type="file" onChange={fileSelector}/>
- 
-{ fimg && <img style={{width:"100%",height:"300px",objectFit:"contain"}} src={`${fimg}`} alt="pjo"/>
-} 
- {fs &&<> <br/><p style={{textAlign:"center",color:"green"}}>Image Uploaded</p></> }
- 
-  </div>
-          
 
-  <br/>
-  <button type="submit"  className="btn bttn btn-outline-primary">Upload Post</button>
-</form>
-<br/><br/>
 
-<br/><br/>
-<br/><br/>
 
-</Template>
-    )
+
+
+
+
+
+
 }
 
 export default UploadPost
