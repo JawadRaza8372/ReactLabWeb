@@ -1,15 +1,13 @@
 import React from 'react'
 import DeveloperCard from './DeveloperCard';
 import Footer from './Footer';
-import Founder from "./Founder";
-import Team from './Team';
 import {founder,founder2} from "./sideManuItems"
-import {motion,useViewportScroll, useTransform} from "framer-motion"
+import {motion} from "framer-motion"
 
 function AboutPage() {
     const exitDiv={animat:{x:"-100vw",transition:{duration:1,ease:"easeInOut"}}};
     const textvarients={init:{y:'-100vw'},anim:{y:0,transition:{delay:1,duration:2}}};
-    const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:2,duration:2}}};
+    const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:1.5,duration:2}}};
     const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.3,type:"spring",stiffness:120}}}
   
       

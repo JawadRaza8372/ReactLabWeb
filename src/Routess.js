@@ -3,7 +3,6 @@ import {Route,Switch,Redirect,useLocation} from "react-router-dom";
 import Contact from "./Contact";
 import About from "./About";
 import AboutPage from "./AboutPage";
-import Service from "./Service";
 import Home from "./Home";
 import Overview from "./OverView"
 import UploadPost from "./UploadPost"
@@ -27,7 +26,6 @@ function Routess({userStatus}) {
     <Redirect to="/home" />
 </Route>
              <Route exact={true} path="/upload" render={() => (<UploadPost rexx={userStatus} />)} />
-             <Route exact={true} path="/services" component={Service} />
              <Route exact={true} path="/overview" component={Overview} />
              <Route exact={true} path="/others" component={Others} />
              <Route exact={true} path="/avatarr" render={() => (<Avatarr titlell={aavatar.title} parar={aavatar.para} />)}/>  

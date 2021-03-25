@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
-import Founder from "./Founder";
 import {motion} from "framer-motion"
 const textvarients={init:{y:'-100vw'},anim:{y:0,transition:{delay:1,duration:2}}};
 const containvarients={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}}};

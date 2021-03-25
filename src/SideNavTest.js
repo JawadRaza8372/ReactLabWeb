@@ -15,9 +15,10 @@ import {motion} from "framer-motion"
 function SideNavTest({userStatus,children}) {
   const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:3,duration:3}}};
 const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
+const exitDiv={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}},animat:{x:"-100vw",transition:{duration:1,ease:"easeInOut"}}};
 
   return (
-    <>
+    <motion.div variants={exitDiv} exit="animat" initial="init" animate="anim">
      <ReactNavbar userStatus={userStatus}/>
     <div style={{backgroundColor:"white",display:"flex",flexDirection:"row",justifyContent:"center",overflow:"hidden"}}>
     <div className="col-12">
@@ -56,7 +57,7 @@ const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",tran
       </div>
     </div>
     </div>
-    </>
+    </motion.div>
   )
 }
 

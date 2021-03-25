@@ -6,12 +6,14 @@ import {motion} from "framer-motion"
 
 function Avatarr({titlell,parar}){
   const [posts,setposts]=useState("");
+  const exitDiv={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}},animat:{x:"-100vw",transition:{duration:1,ease:"easeInOut"}}};
+
   useEffect(()=>{
     db.collection("posts").onSnapshot((snapshot)=>{
       setposts(snapshot.docs.map(doc=>(({id:doc.id,post:doc.data()}))))
     })
     },[]);
-    return(<>
+    return(<motion.div variants={exitDiv} exit="animat" initial="init" animate="anim" >
     
       <CodeTemplate title={titlell} titlepara={parar}>
       <h1 className="maincolor">Usage</h1>
@@ -24,6 +26,6 @@ function Avatarr({titlell,parar}){
           return null;
         }})}
       </CodeTemplate>
-    </>);
+    </motion.div>);
 }
 export default Avatarr;

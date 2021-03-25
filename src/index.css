@@ -73,6 +73,25 @@ code {
 .text_center {
   text-align: center;
 }
+#upload_button {
+  display: inline-block;
+}
+#upload_button input[type="file"] {
+  display: none;
+}
+input#file {
+  display: inline-block;
+  width: 100%;
+  padding: 50px 0 0 0;
+  height: 30px !important;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png")
+    center center no-repeat #fffefe;
+  background-size: 60px 60px;
+}
 .herobg {
   background: linear-gradient(#2089dc, #79b6e4);
   padding: 4rem 2rem;

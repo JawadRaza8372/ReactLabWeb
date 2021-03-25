@@ -2,7 +2,6 @@ import React from "react";
 import ReactNavbar from "./ReactNavbar";
 
 import {useLocation} from "react-router-dom";
-import SideNav from "./SideNav"
 import SideNavTest from "./SideNavTest"
 import Routess from "./Routess";
 
