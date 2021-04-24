@@ -1,41 +1,34 @@
 import React,{useState} from 'react'
 import CopyToClipboard from "react-copy-to-clipboard"
 import ReactPlayer from 'react-player'
-import {Row,Col,Toast,Button} from "react-bootstrap"
-import { AnimatePresence,motion } from 'framer-motion';
-function PostCodeTemplate({UseTitle,UsePara,code,code2,imgsrc,children,videoLink}) {
-  const btnHover={hovers:{scale:1.2,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
+import {motion } from 'framer-motion';
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import Toaster from './Toaster';
+
+function PostCodeTemplate({UseTitle,UsePara,codee,codee2,imgsrc,children,videoLink}) {
+  const btnHover={hovers:{scale:1.05,transition:{duration:0.4,type:"spring",stiffness:520}}}
 
     const [cop, setcop] = useState(false);
-const [btnt, setbtnt] = useState("Copy");
-const [boxx, setboxx] = useState("#f5f7f5");
-const [bcol, setbcol] = useState("btn btn-outline-primary");
 const [cop1, setcop1] = useState(false);
-const [btnt1, setbtnt1] = useState("Copy");
-const [boxx1, setboxx1] = useState("#e6cccc");
-const [bcol1, setbcol1] = useState("btn btn-outline-primary");
+
 const [show, setShow] = useState(false);
 const [show1, setShow1] = useState(false);
 
   const  onCopy=()=> {
         setcop(true);
-        setbtnt("Copied");
-        setboxx("#70e08a");
-        setbcol("btn btn-success");
         setShow(true)
       }
       const  onCopy1=()=> {
         setcop1(true);
-        setbtnt1("Copied");
-        setboxx1("#70e08a");
-        setbcol1("btn btn-success");
+       
         setShow1(true)
       }
     return (
         <>
       <div className="container  m-auto px-2 py-2">   
 {UseTitle && <header><h1 className="maincolor" style={{textTransform:"capitalize"}}>{UseTitle}</h1></header>
-}{UsePara &&<p style={{fontSize:"16px"}}>{UsePara}</p>
+}{UsePara && <p style={{fontSize:"16px",display: "block"}}>{UsePara}</p>
 }
 
 <br/>
@@ -52,42 +45,31 @@ const [show1, setShow1] = useState(false);
 <ReactPlayer width="100%" url={videoLink} />
 <br/></div></div>}
 
-{code &&<><div className="daba2 ml-auto mr-auto"  style={{backgroundColor:"#f5f7f5",border:"2px solid #2089dc"}}>
-<h6><pre>{code}</pre></h6>
-<br/>
-    <CopyToClipboard text={code} onCopy={cop}>
-    <Row>
-    
+{codee &&<>
+<motion.div className="container d-block" variants={btnHover} whileHover="hovers" onClick={onCopy}>   
+ <CopyToClipboard text={codee} onCopy={cop}>
 
-    <Toast onClose={() => setShow(false)} show={show} delay={2000} autohide animation>
-<center>
-     <h6  style={{color:"green",marginTop:"20px",marginBottom:"20px"}}>Coppied</h6></center>
-    </Toast>
+<SyntaxHighlighter language="javascript"  wrapLines={true} wrapLongLines codetag='true' pretag="true"  style={a11yDark}>
+{codee}</SyntaxHighlighter>  
+      </CopyToClipboard>
+</motion.div>
+    <Toaster close={() => setShow(false)} show={show} styled={{color:"green",marginTop:"20px",marginBottom:"20px"}} text="Copied" />   
 
-  <Col xs={6}>
-    <motion.div   variants={btnHover} whileHover="hovers" ><Button  onClick={onCopy}>Copy</Button></motion.div>
-  </Col>
-</Row>
-        </CopyToClipboard>
-</div><br/></>}
-{code2 &&<><div className="daba2  ml-auto mr-auto" style={{backgroundColor:"#f5f7f5",border:"2px solid #2089dc"}}>
-<br/>
-<h6><pre>{code2}</pre></h6>
+</>}
 
-<br/>
-    <CopyToClipboard  text={code2} onCopy={cop1}>
-    <Row>
-        <Toast  onClose={() => setShow1(false)} show={show1} delay={2000} autohide animation>
-<center>
-         <h6 style={{color:"green",marginTop:"20px",marginBottom:"20px"}}>Coppied</h6></center>
-        </Toast>
-      <Col xs={6}>
-      <motion.div   variants={btnHover} whileHover="hovers" ><Button  onClick={onCopy}>Copy</Button></motion.div>
-      </Col>
-    </Row>
-        </CopyToClipboard>
-</div><br/></>}
-<br/>
+{codee2 &&<>
+<motion.div className="container d-block"  variants={btnHover} whileHover="hovers" onClick={onCopy1}>    
+<CopyToClipboard text={codee2} onCopy={cop1}>
+
+<SyntaxHighlighter language="javascript"  wrapLines={true} wrapLongLines codetag='true' pretag="true"   style={a11yDark}>
+{codee2}</SyntaxHighlighter>  
+      </CopyToClipboard>
+</motion.div>
+  <Toaster close={() => setShow1(false)} show={show1} styled={{color:"green",marginTop:"20px",marginBottom:"20px"}} text="Copied" />   
+
+
+
+</>}
 </div>
 
          

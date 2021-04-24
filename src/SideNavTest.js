@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import sideManuItems from "./sideManuItems"
 import {sideManuItem2,sideManuItem3} from "./sideManuItems"
 import {NavLink} from "react-router-dom";
@@ -7,16 +7,22 @@ import AppsIcon from '@material-ui/icons/Apps';
 import "./index.css"
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Logo from "./images/logo.png"
-import NavLists from './NavLists';
+import NavLists,{NavLists2} from './NavLists';
 import ReactNavbar from "./ReactNavbar"
 import Footer from './Footer';
 import {motion} from "framer-motion"
+import {db} from "./FirebaseConfig";
 
 function SideNavTest({userStatus,children}) {
   const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:3,duration:3}}};
 const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
 const exitDiv={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}},animat:{x:"-100vw",transition:{duration:1,ease:"easeInOut"}}};
-
+const [posts, setposts] = useState(null)
+useEffect(()=>{
+  db.collection("menu").orderBy('text',"asc").get().then((snapshot)=>{
+    setposts(snapshot.docs.map(doc=>(({id:doc.id,post:doc.data()}))))
+  })
+  },[]);
   return (
     <motion.div variants={exitDiv} exit="animat" initial="init" animate="anim">
      <ReactNavbar userStatus={userStatus}/>
@@ -40,7 +46,7 @@ const exitDiv={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}},animat:{x:"-
 <div>
 
 <NavLists title="It Starts Basic" item={sideManuItems}/>
-        <NavLists title="Components" item={sideManuItem2}/>
+ { posts &&      <NavLists2 title="Components" item={posts}/>}
         <NavLists title="React Lab+" item={sideManuItem3}/>
        
 </div>

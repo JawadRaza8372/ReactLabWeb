@@ -9,7 +9,7 @@ function About(){
     return(<motion.div variants={exitDiv} exit="animat" initial="init" animate="anim">
       <CodeTemplate title="Getting Started" titlepara={para}>
 <PostCodeTemplate UseTitle="Installation" UsePara="Installing React Native Elements depends on your type of react native project."
- code="yarn add react-native-elements" code2="npm install react-native-elements">
+ codee="yarn add react-native-elements" codee2="npm install react-native-elements">
      <ul>
      <li>Expo | Create React Native App</li>
 <li>React Native CLI</li>

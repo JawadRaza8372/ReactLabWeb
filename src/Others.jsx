@@ -16,9 +16,10 @@ function Others(){
     let para="React Lab+ contains many other features and reusable features like themes build by React Lab ,IOTs components ,Firebase Backend etc.";
     return(<motion.div variants={exitDiv} exit="animat" initial="init" animate="anim">
       <CodeTemplate title="React Lab+" titlepara={para}>
+      <h1 className="maincolor">Usage</h1>
       {posts && posts.map((avin,index)=>{ 
         if (avin.post.category=== titlell){
-          return <PostCodeTemplate key={index} UseTitle={avin.post.title} videoLink={avin.post.video} UsePara={avin.post.para} code={avin.post.code} imgsrc={avin.post.img}/>
+          return <PostCodeTemplate key={index} UseTitle={avin.post.title} videoLink={avin.post.video} UsePara={avin.post.para} codee={avin.post.code} imgsrc={avin.post.img}/>
 
         }
         else{

@@ -2,10 +2,12 @@ import React,{useState,useEffect} from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import NavRoutes from "./NavRoutes";
-import {auth} from "./FirebaseConfig"
+import {auth,db} from "./FirebaseConfig"
 
 function App() {
 const [user, setuser] = useState(null)
+const [posts, setposts] = useState(null)
+
   useEffect(()=>{
     auth.onAuthStateChanged((user) => {
         if (user) {
@@ -19,10 +21,16 @@ const [user, setuser] = useState(null)
 
       
 },[]);     
+useEffect(()=>{
+  db.collection("menu").orderBy('text',"asc").get().then((snapshot)=>{
+    setposts(snapshot.docs.map(doc=>(({id:doc.id,post:doc.data()}))))
+  })
+    
+},[]);
 
   return (
     <>
-<NavRoutes status={user}/>
+<NavRoutes status={user} data={posts}/>
 
 
     </>

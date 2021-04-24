@@ -5,25 +5,28 @@ import {useLocation} from "react-router-dom";
 import SideNavTest from "./SideNavTest"
 import Routess from "./Routess";
 
-function NavRoutes({status}){
+function NavRoutes({status,data}){
     const location =useLocation().pathname;
     return(<>
     
 {(location.match("/home"|| "/"))?
   <> <ReactNavbar userStatus={status}/>
-  <Routess userStatus={status}/>
+  <Routess userStatus={status} data={data}/>
   </>:(location.match("/about"))?
   <> <ReactNavbar userStatus={status}/>
-  <Routess  userStatus={status}/>
+   <Routess userStatus={status} data={data}/>
   </>:(location.match("/upload"))?
   <> <ReactNavbar userStatus={status}/>
-  <Routess  userStatus={status}/>
+   <Routess userStatus={status} data={data}/>
+  </>:(location.match("/addCategory"))?
+  <> <ReactNavbar userStatus={status}/>
+   <Routess userStatus={status} data={data}/>
   </>:(location.match("/login"))?
   <> <ReactNavbar  userStatus={status}/>
   <Routess userStatus={status}/>
   </>:
   <SideNavTest userStatus={status}>
-  <Routess  userStatus={status}/>
+   <Routess userStatus={status} data={data}/>
 
    </SideNavTest>
 

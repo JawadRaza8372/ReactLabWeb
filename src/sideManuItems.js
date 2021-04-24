@@ -134,8 +134,8 @@ const cate=[
  
       
 ];
-const founder={name:"Jawad",role:"Co-Founder",href1:"",href2:"",href3:"",href4:""}
-const founder2={name:"Umer",role:"Founder",href1:"",href2:"",href3:"",href4:""}
+const founder={name:"Jawad",role:"Co-Founder",href1:"",href2:"",href3:"",href4:"",avatarr:"https://cdn4.iconfinder.com/data/icons/men-avatars-icons-set-2/256/4-512.png"}
+const founder2={name:"Umer",role:"Founder",href1:"",href2:"",href3:"",href4:"",avatarr:"https://tse2.mm.bing.net/th?id=OIP.E1nNUBIKpAk9jepM847IrAAAAA&pid=Api&P=0&w=300&h=300"}
 
 export default sideManuItem;
 export {sideManuItem2,sideManuItem3,cate,founder,founder2}

@@ -122,6 +122,9 @@ input#file {
 }
 .active_class {
   color: #3578e5 !important;
+  text-decoration: underline !important;
+  font-weight: bolder !important;
+  font-size: larger !important;
 }
 .blacksimpletxt {
   color: black;

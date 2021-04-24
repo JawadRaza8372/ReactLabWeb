@@ -42,11 +42,11 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(180deg)',
   },
   avatar: {
-    backgroundColor: red[500],width:"250px",height:"250px"
+    backgroundColor: "grey",width:"250px",height:"250px"
   },
 }));
 
-export default function DeveloperCard({name,role,href1,href2,href3,href4}) {
+export default function DeveloperCard({name,role,href1,href2,href3,href4,avatarr}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -57,8 +57,8 @@ export default function DeveloperCard({name,role,href1,href2,href3,href4}) {
   return (
     <Card className={classes.root} style={{    background: "linear-gradient(#2089dc, #79b6e4)",borderRadius:"25px",padding:"10px"}}>
      <center>
-          <Avatar aria-label="recipe" src="https://static.toiimg.com/photo/76729750.cms" className={classes.avatar}>
-            R
+          <Avatar aria-label="recipe" src={`${avatarr}`} className={classes.avatar}>
+            {name}
           </Avatar>
         </center>
        

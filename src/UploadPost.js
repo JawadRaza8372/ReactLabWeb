@@ -1,21 +1,27 @@
-import React,{ useState} from 'react'
+import React,{ useState,useEffect} from 'react'
 import "./index.css";
 import {storage, db} from "./FirebaseConfig"
 import {Redirect} from "react-router-dom"
-import {cate} from "./sideManuItems"
 import TemplateBlue from './TemplateBlue';
 import {motion} from "framer-motion"
 function UploadPost({rexx}) {
     const [state, setstate] = useState({title:null,img:null,video:null,para:null,code:null,category:null});
     const [fs,setf]=useState(null);
+    const [posts, setposts] = useState(null)
     let [filef,setfilf]=useState("");
     const [rex, setR] = useState(false)
     const [fimg,setfimg]=useState(null);
     const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:1,duration:1.5}}};
-    const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
+    const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:110}}}
     const exitDiv={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}},animat:{x:"-100vw",transition:{duration:1.5,ease:"easeInOut"}}};
 
 let constt="";
+useEffect(()=>{
+  db.collection("menu").orderBy('text',"asc").get().then((snapshot)=>{
+    setposts(snapshot.docs.map(doc=>(({id:doc.id,post:doc.data()}))))
+  })
+    
+},[]);
     const handlein=(e)=>{
         const name=e.target.id;
         const value=e.target.value;
@@ -94,18 +100,18 @@ let constt="";
                                           <motion.textarea variants={btnHover} whileHover="hovers" type="text" className="form-control" style={{border:"2px solid #2089dc",color:"#2089dc"}} onChange={handlein} id="para" autoComplete="off" placeholder="Description"  required/>
                                         </div>
                                         <div className="form-group mb-3">
-                                          <motion.textarea variants={btnHover} whileHover="hovers" type="text" className="form-control" style={{border:"2px solid #2089dc",color:"#2089dc"}} onChange={handlein} id="code" autoComplete="off" placeholder="Code"/>
+                                          <motion.textarea variants={btnHover} whileHover="hovers" type="text" className="form-control" style={{border:"2px solid #2089dc",color:"#2089dc",height:"250px"}} onChange={handlein} id="code" autoComplete="off" placeholder="Code"/>
                                         </div>
                                         <div className="form-group mb-3">
                                           <motion.input variants={btnHover} whileHover="hovers"  type="text" className="form-control" style={{border:"2px solid #2089dc",color:"#2089dc"}} onChange={handlein} id="video" autoComplete="off" placeholder="Video Link"/>
                                         </div>
                                         <div className="form-group mb-3">
                                                                       <div className="col-12">
-                                                                       <motion.select variants={btnHover} whileHover="hovers" defaultValue="Category" onChange={handlein} style={{width:"100%",height:"40px",backgroundColor:"transparent",border:"2px solid #2089dc",color:"#2089dc"}} name="cars" id="category">
+                                                                       <select defaultValue="Category" onChange={handlein} style={{width:"100%",height:"40px",backgroundColor:"transparent",border:"2px solid #2089dc",color:"#2089dc"}} name="cars" id="category">
                                                                        <option  disabled>Category</option>
-                                                                      {cate && cate.map((avin)=><option  className="maincolor" >{avin.text}</option>) }
-                                                                       
-                                                                       </motion.select></div></div>
+                                                                      {posts && posts.map((avin)=><option  className="maincolor" key={avin.id} >{avin.post.text}</option>) }
+                                                                      <option  className="maincolor">Others</option>
+                                                                       </select></div></div>
                                                                       
                                        
                                         <div className="form-group mb-3">

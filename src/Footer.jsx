@@ -10,7 +10,7 @@ function Footer(){
   const ButtonCvarients4={init1:{y:'100vw'},anim1:{y:0,transition:{delay:3,duration:3}}};
   const containvarients={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}}};
   const exitDiv={animat:{x:"-100vw",transition:{duration:1,ease:"easeInOut"}}};
-  const btnHover={hovers:{scale:1.3,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
+  const btnHover={hovers:{scale:1.1,transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
 
 
     return(<motion.div variants={exitDiv} exit="animat">
