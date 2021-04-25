@@ -6,9 +6,7 @@ name:"staeted"}
     {text:"Overview",
     path:`/overview`,
     name:"staeted2"},
-      {text:"Customization",
-    path:"/contact",
-    name:"staeted3"}
+     
         
 ];
 const sideManuItem2=[
@@ -137,5 +135,6 @@ const cate=[
 const founder={name:"Jawad",role:"Co-Founder",href1:"",href2:"",href3:"",href4:"",avatarr:"https://cdn4.iconfinder.com/data/icons/men-avatars-icons-set-2/256/4-512.png"}
 const founder2={name:"Umer",role:"Founder",href1:"",href2:"",href3:"",href4:"",avatarr:"https://tse2.mm.bing.net/th?id=OIP.E1nNUBIKpAk9jepM847IrAAAAA&pid=Api&P=0&w=300&h=300"}
 
+const overpara="It is a react native library which is introduced to write down less code and make the responsive mobile application design easier. Earlier whenever we are writing code we want to define all the properties within the separate file that we would like to connect, wherein in our library we've already written reusable components.you only need to import that Library from NPM or YARN to use it.This can be wont to build mobile applications of any scale, from small blogs to large corporate applications. You did not get to re-design every element.And you do not get to spend hours trying to urge everything looking and dealing right across platforms and devices. By using this, all of the diligence is completed for you. The library is multi-Functional which incorporates many Components that will be employed by novice developers to make Robust Themes for Mobile Applications, Our Library is often used on both Android and ios."
 export default sideManuItem;
-export {sideManuItem2,sideManuItem3,cate,founder,founder2}
+export {sideManuItem2,sideManuItem3,cate,founder,founder2,overpara}
