@@ -46,14 +46,14 @@ function Footer(){
 <div className="container-fluid nav-bg">
     <div className="row">
 <div className="col-2 mx-auto">
-<motion.div className="row" variants={ButtonCvarients4} initial="init1" animate="anim1">
+<div className="row" >
 <NavLink to="/home">
 <motion.div style={{flexDirection:"row",display:"flex",marginLeft:"10px"}}  variants={btnHover} whileHover="hovers">
   <img style={{height:"40px",marginRight: ".5rem",alignSelf:"center"}} alt="logo" src="https://reactnativeelements.com/img/logo-icon.svg"/>
   <h4 style={{alignSelf:"center",color:"white"}}>React Lab
   </h4></motion.div>
   </NavLink>
-</motion.div>
+</div>
 </div>
 </div>
 </div>

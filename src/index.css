@@ -98,11 +98,8 @@ input#file {
 }
 .hero {
   align-items: center;
-  /* background-color: #2089dc; */
   background: linear-gradient(#2089dc, #79b6e4);
   color: #444950;
-  height: 50vh;
-  color: var(--ifm-hero-text-color);
   display: flex;
   padding: 4rem 2rem;
 }
@@ -142,4 +139,50 @@ input#file {
   text-transform: capitalize;
   margin: auto;
   /* text-shadow:2px 0 0 #FFFFFF, 0 -1px 0 #FFFFFF, 0 1px 0 #FFFFFF, -1px 0 0#FFFFFF; */
+}
+
+.parallelxeffecrt {
+  width: 100%;
+  background-attachment: fixed;
+  background-size: auto 100%;
+}
+.header_img {
+  text-align: center;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }

@@ -3,10 +3,12 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import NavRoutes from "./NavRoutes";
 import {auth,db} from "./FirebaseConfig"
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 function App() {
 const [user, setuser] = useState(null)
 const [posts, setposts] = useState(null)
+AOS.init();
 
   useEffect(()=>{
     auth.onAuthStateChanged((user) => {
