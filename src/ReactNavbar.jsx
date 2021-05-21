@@ -18,9 +18,13 @@ return (<>
         <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"  className="nav-link h6"  to="/home">Home</NavLink>
         <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/overview">Components</NavLink>
         <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/docs">Docs</NavLink>
+        <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/searchComponent">Search</NavLink>
+
         <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/about">About</NavLink>
-{ (userStatus)? <> <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/upload">Upload</NavLink>
+{ (userStatus)? <> <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/upload">Upload Component</NavLink>
 <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6" to="/addCategory">Add Category</NavLink>
+<NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6" to="/ComponentMod">Update</NavLink>
+
 
         <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6" onClick={()=>{auth.signOut()}}  to="">Logout</NavLink>
 </>:

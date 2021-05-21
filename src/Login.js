@@ -4,6 +4,8 @@ import {storage,auth, db} from "./FirebaseConfig"
 import {Redirect, useHistory} from "react-router-dom"
 import Template from './Template';
 import TemplateBlue from './TemplateBlue';
+import {Row,Toast} from "react-bootstrap"
+
 import {motion} from "framer-motion"
 function Login({rexx}) {
 
@@ -11,7 +13,9 @@ function Login({rexx}) {
     const [suser,setuser]=useState(null);
     const [success, setSuccess] = useState(null);
     const [failure, setfailure] = useState(null);
-    const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:1,duration:1.5}}};
+    const [showtost, setClose] = useState(false);
+
+    const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{duration:0.5}}};
     const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
     const exitDiv={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}},animat:{x:"-100vw",transition:{duration:1,ease:"easeInOut"}}};
 
@@ -38,6 +42,7 @@ function Login({rexx}) {
     }).catch((err) => {
       console.log('LOGIN_failed');
       setfailure(err)
+      setClose(true)
     });
         }
        
@@ -64,8 +69,15 @@ else{
     <motion.input type="password" className="form-control"  variants={btnHover} whileHover="hovers"  minLength="6" style={{border:"2px solid #2089dc",color:"#2089dc"}} onChange={handlein} id="password" autoComplete="off" placeholder="User Password"/>
   </div>
   
-  
-  {failure && <><br/><motion.p  variants={ButtonCvarients2} initial="init1" animate="anim1"  style={{color:"red",fontSize:"14px"}}>Login Failed </motion.p><motion.p  variants={ButtonCvarients2} initial="init1" animate="anim1"  style={{fontSize:"12px",color:"red"}}>({failure.message})</motion.p></>}
+  {failure && <> <Row>
+    
+
+        <Toast onClose={()=>{setClose(false)}} show={showtost} delay={4000} autohide animation>
+    <center>
+    <motion.p  variants={ButtonCvarients2} initial="init1" animate="anim1"  style={{color:"red",fontSize:"14px"}}>Login Failed </motion.p><motion.p  variants={ButtonCvarients2} initial="init1" animate="anim1"  style={{fontSize:"12px",color:"red"}}>({failure.message})</motion.p>
+         </center>
+        </Toast>
+    </Row></>}
   {success && <Redirect push to="/upload"/>}
 
   <br/>

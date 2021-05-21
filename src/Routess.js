@@ -9,12 +9,11 @@ import UploadPost from "./UploadPost"
 import Avatarr from "./Avatarr"
 import Others from "./Others"
 import Login from "./Login"
+import ComponentUpdateDELT from "./ComponentUpdateDELT"
 import UploadCategory from "./UploadCategory"
-import {db} from "./FirebaseConfig";
+import Search from "./Search"
 
 
-import {aavatar,abadge,aBottomSheet,aButton,aButtonGroup,aCard,aCheckBox,aDivider,aHeader,aIcon,aImage,aInput,aListItem,aOverlay,
-    aPricing,aRating,aSearchBa,aSlider,aSocialIcon,aText,aTile,aTooltip} from "./CompHeaderDta";
 import { AnimatePresence } from 'framer-motion';
 function Routess({userStatus,data}) {
     const location=useLocation();
@@ -24,6 +23,8 @@ function Routess({userStatus,data}) {
          <Switch location={location} key={location.key}>
              <Route exact={true} path="/home" component={Home}/>
              <Route exact={true} path="/login" render={() => (<Login rexx={userStatus} />)}/>
+             <Route exact={true} path="/ComponentMod" render={() => (<ComponentUpdateDELT rexx={userStatus} />)}/>
+
              <Route exact={true} path="/about" component={AboutPage}/>
              <Route exact={true} path="/">
     <Redirect to="/home" />
@@ -33,6 +34,8 @@ function Routess({userStatus,data}) {
              <Route exact={true} path="/upload" render={() => (<UploadPost rexx={userStatus} />)} />
              <Route exact={true} path="/overview" component={Overview} />
              <Route exact={true} path="/others" component={Others} />
+             <Route exact={true} path="/searchComponent" component={Search} />
+
 
 
 

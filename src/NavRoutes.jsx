@@ -21,9 +21,15 @@ function NavRoutes({status,data}){
   </>:(location.match("/addCategory"))?
   <> <ReactNavbar userStatus={status}/>
    <Routess userStatus={status} data={data}/>
+  </>:(location.match("/ComponentMod"))?
+  <> <ReactNavbar userStatus={status}/>
+   <Routess userStatus={status} data={data}/>
   </>:(location.match("/login"))?
   <> <ReactNavbar  userStatus={status}/>
   <Routess userStatus={status}/>
+  </>:(location.match("/searchComponent"))?
+  <> <ReactNavbar userStatus={status}/>
+   <Routess userStatus={status} data={data}/>
   </>:
   <SideNavTest userStatus={status}>
    <Routess userStatus={status} data={data}/>

@@ -11,6 +11,7 @@ var firebaseConfig = {
   
  const FirebaseApp= firebase.initializeApp(firebaseConfig);
  const db=FirebaseApp.firestore();
+
  const auth=firebase.auth();
  const storage=firebase.storage();
  export {db,auth,storage};
