@@ -40,8 +40,7 @@ function MiniCard({title,category,data}) {
           
       },[]);
     const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:110}}}
- 
-    return (<>
+    return (<React.Fragment>
         <div className="col-4">
 <div className="container" style={{backgroundColor:"white",height:"auto",padding:"10px",borderRadius:"15px"}}>
         <br/><h5 style={{color:"#3498db"}}>Title: {title}</h5>
@@ -56,7 +55,7 @@ function MiniCard({title,category,data}) {
         </div>
         </div>
         
-        <MyModel openModel={modal2} closeModel={()=>setModal2(false)}><>
+        <MyModel openModel={modal2} closeModel={()=>setModal2(false)}><div>
 
         <motion.form className="container" style={{overflowY:"auto",backgroundColor:"white",padding:"30px",margintop:"25px",borderRadius:"25px"}} onSubmit={submitform}>
         <h2 className="blacksimpletxt" style={{color:"#2089dc",textAlign:"center"}}>Update Component</h2><br/>
@@ -88,8 +87,8 @@ function MiniCard({title,category,data}) {
               
         
           <motion.button type="submit" variants={btnHover} whileHover="hovers"  className="btn bttn btn-outline-primary">Upload Post</motion.button>
-        </motion.form></></MyModel>
-        <MyModel openModel={modal3} closeModel={()=>setModal3(false)}><>
+        </motion.form></div></MyModel>
+        <MyModel openModel={modal3} closeModel={()=>setModal3(false)}><div>
        <div className="container">
        <center>
            <h5 style={{color:"tomato",textTransform:"capitalize",marginTop:"30px"}}>Are you sure? You want to delete this!!</h5><br/>
@@ -101,9 +100,9 @@ function MiniCard({title,category,data}) {
        </center>
        </div>
        
-</></MyModel>
+</div></MyModel>
         
-        </>
+        </React.Fragment>
 
     )
 }
@@ -145,7 +144,7 @@ const delate=(e)=>{
         console.error("Error removing document: ", error);
     });
 }
-    return (<>
+    return (<React.Fragment>
         <div className="col-4">
 <div className="container" style={{backgroundColor:"white",height:"auto",padding:"10px",borderRadius:"15px"}}>
         <br/><h5 style={{color:"#3498db"}}>Title: {title}</h5>
@@ -159,7 +158,7 @@ const delate=(e)=>{
         </div>
         </div>
         </div>
-        <MyModel openModel={modal} closeModel={()=>setModal(false)}><>
+        <MyModel openModel={modal} closeModel={()=>setModal(false)}><div>
         <motion.form variants={exitDiv} exit="animat" initial="init" animate="anim" className="container" style={{overflowY:"auto",backgroundColor:"white",padding:"30px",borderRadius:"25px"}} onSubmit={submitform}>
                                       <h2 className="blacksimpletxt" style={{color:"#2089dc",textAlign:"center"}}>Update Category</h2><br/>
                                       <div className="form-group mb-3">
@@ -171,8 +170,8 @@ const delate=(e)=>{
                        
                                         <motion.button type="submit" variants={btnHover} whileHover="hovers"  className="btn bttn btn-outline-primary">Update</motion.button>
                                       </motion.form>  
-       </> </MyModel>
-       <MyModel openModel={modal2} closeModel={()=>setModal2(false)}><>
+       </div> </MyModel>
+       <MyModel openModel={modal2} closeModel={()=>setModal2(false)}><div>
        <div className="container">
        <center>
            <h5 style={{color:"tomato",textTransform:"capitalize",marginTop:"30px"}}>Are you sure? You want to delete this!!</h5><br/>
@@ -184,8 +183,8 @@ const delate=(e)=>{
        </center>
        </div>
        
-</></MyModel>
-        </>
+</div></MyModel>
+        </React.Fragment>
         
     )
 }

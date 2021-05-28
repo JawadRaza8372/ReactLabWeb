@@ -55,7 +55,7 @@ else{
 
 
     return (
-        <>
+        
                   <TemplateBlue>
                   <div style={{display: "flex",justifyContent:"center",alignItems: "center",marginTop:"8%",marginBottom:"7%",paddingBottom:"auto",paddingTop:"auto"}}>
 
@@ -69,7 +69,7 @@ else{
     <motion.input type="password" className="form-control"  variants={btnHover} whileHover="hovers"  minLength="6" style={{border:"2px solid #2089dc",color:"#2089dc"}} onChange={handlein} id="password" autoComplete="off" placeholder="User Password"/>
   </div>
   
-  {failure && <> <Row>
+  {failure &&  <Row>
     
 
         <Toast onClose={()=>{setClose(false)}} show={showtost} delay={4000} autohide animation>
@@ -77,7 +77,7 @@ else{
     <motion.p  variants={ButtonCvarients2} initial="init1" animate="anim1"  style={{color:"red",fontSize:"14px"}}>Login Failed </motion.p><motion.p  variants={ButtonCvarients2} initial="init1" animate="anim1"  style={{fontSize:"12px",color:"red"}}>({failure.message})</motion.p>
          </center>
         </Toast>
-    </Row></>}
+    </Row>}
   {success && <Redirect push to="/upload"/>}
 
   <br/>
@@ -89,7 +89,7 @@ else{
 <br/><br/>
 </div>
 </TemplateBlue>
-        </>
+        
     )}
 }
 

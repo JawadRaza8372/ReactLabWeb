@@ -25,7 +25,7 @@ const onPress=()=>{
 setInpt(inp);
 }
     return (
-        <>
+        <div>
         <div className="container-fluid nav-bg">
     <div className="row">
 <div className="col-10 mx-auto">
@@ -48,7 +48,7 @@ setInpt(inp);
 </div></div>
     <div style={{border:"2px solid #2089dc"}} className="container-fluid pt-2 pb-1 mt-4">
 
-{inpt &&<>
+{inpt &&<div>
    <center>
    <h1  className="maincolor">Search Results</h1> <button className="btn btn-outline-danger" onClick={()=>{setInpt('');setInp('')}}>Clear</button>
    </center>
@@ -59,7 +59,7 @@ setInpt(inp);
         }
         else{
           return null;
-        }})}</>
+        }})}</div>
 
 }
 {(!inpt) &&<center>
@@ -74,7 +74,7 @@ setInpt(inp);
             
         </div>
         </div></div>
-       </>
+       </div>
 
 
     )

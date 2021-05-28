@@ -2,7 +2,7 @@ import React from 'react'
 
 function Template({children}) {
     return (
-        <>
+        <div>
            <section id="header" >
 <div className="container-fluid"  style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
     <div className="row">
@@ -16,7 +16,7 @@ function Template({children}) {
 </div>
 </div>
 </section> 
-        </>
+        </div>
     )
 }
 

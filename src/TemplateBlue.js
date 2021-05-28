@@ -2,7 +2,7 @@ import React from 'react'
 
 function TemplateBlue({children}) {
     return (
-        <>
+        <div>
            <section id="header" className="herobg d-flex overflow-hidden" style={{height:"90vh"}} >
 <div className="container-fluid"  style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
     <div className="row">
@@ -18,7 +18,7 @@ function TemplateBlue({children}) {
 </div>
 </div>
 </section> 
-        </>
+        </div>
     )
 }
 

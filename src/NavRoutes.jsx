@@ -7,30 +7,30 @@ import Routess from "./Routess";
 
 function NavRoutes({status,data}){
     const location =useLocation().pathname;
-    return(<>
+    return(<div>
     
 {(location.match("/home"|| "/"))?
-  <> <ReactNavbar userStatus={status}/>
+  <div> <ReactNavbar userStatus={status}/>
   <Routess userStatus={status} data={data}/>
-  </>:(location.match("/about"))?
-  <> <ReactNavbar userStatus={status}/>
+  </div>:(location.match("/about"))?
+  <div> <ReactNavbar userStatus={status}/>
    <Routess userStatus={status} data={data}/>
-  </>:(location.match("/upload"))?
-  <> <ReactNavbar userStatus={status}/>
+  </div>:(location.match("/upload"))?
+  <div> <ReactNavbar userStatus={status}/>
    <Routess userStatus={status} data={data}/>
-  </>:(location.match("/addCategory"))?
-  <> <ReactNavbar userStatus={status}/>
+  </div>:(location.match("/addCategory"))?
+  <div> <ReactNavbar userStatus={status}/>
    <Routess userStatus={status} data={data}/>
-  </>:(location.match("/ComponentMod"))?
-  <> <ReactNavbar userStatus={status}/>
+  </div>:(location.match("/ComponentMod"))?
+  <div> <ReactNavbar userStatus={status}/>
    <Routess userStatus={status} data={data}/>
-  </>:(location.match("/login"))?
-  <> <ReactNavbar  userStatus={status}/>
+  </div>:(location.match("/login"))?
+  <div> <ReactNavbar  userStatus={status}/>
   <Routess userStatus={status}/>
-  </>:(location.match("/searchComponent"))?
-  <> <ReactNavbar userStatus={status}/>
+  </div>:(location.match("/searchComponent"))?
+  <div> <ReactNavbar userStatus={status}/>
    <Routess userStatus={status} data={data}/>
-  </>:
+  </div>:
   <SideNavTest userStatus={status}>
    <Routess userStatus={status} data={data}/>
 
@@ -39,6 +39,6 @@ function NavRoutes({status,data}){
 }
          
 
-    </>);
+    </div>);
     }
     export default NavRoutes; 

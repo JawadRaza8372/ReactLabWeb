@@ -25,7 +25,7 @@ const [show1, setShow1] = useState(false);
         setShow1(true)
       }
     return (
-        <>
+        <div>
       <div className="container  m-auto px-2 py-2">   
 {UseTitle && <header><h1 className="maincolor" style={{textTransform:"capitalize"}}>{UseTitle}</h1></header>
 }{UsePara && <p style={{fontSize:"16px",display: "block"}}>{UsePara}</p>
@@ -45,7 +45,7 @@ const [show1, setShow1] = useState(false);
 <ReactPlayer width="100%" url={videoLink} />
 <br/></div></div>}
 
-{codee &&<>
+{codee &&<div>
 <motion.div className="container d-block" variants={btnHover} whileHover="hovers" onClick={onCopy}>   
  <CopyToClipboard text={codee} onCopy={cop}>
 
@@ -55,9 +55,9 @@ const [show1, setShow1] = useState(false);
 </motion.div>
     <Toaster close={() => setShow(false)} show={show} styled={{color:"green",marginTop:"20px",marginBottom:"20px"}} text="Copied" />   
 
-</>}
+</div>}
 
-{codee2 &&<>
+{codee2 &&<div>
 <motion.div className="container d-block"  variants={btnHover} whileHover="hovers" onClick={onCopy1}>    
 <CopyToClipboard text={codee2} onCopy={cop1}>
 
@@ -69,11 +69,11 @@ const [show1, setShow1] = useState(false);
 
 
 
-</>}
+</div>}
 </div>
 
          
-        </>
+        </div>
     )
 }
 

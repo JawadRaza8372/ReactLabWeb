@@ -122,7 +122,7 @@ useEffect(()=>{
                                        
                                       { fimg && <img style={{width:"100%",height:"100px",objectFit:"contain"}} src={`${fimg}`} alt="pjo"/>
                                       } 
-                                       {(fs)? <> <br/><motion.p  variants={ButtonCvarients2} initial="init1" animate="anim1"  style={{textAlign:"center",color:"green"}}>Image Uploaded</motion.p></>:<motion.p variants={ButtonCvarients2} initial="init1" animate="anim1" className="maincolor" >Select Image For Preview</motion.p> }
+                                       {(fs)? <div> <br/><motion.p  variants={ButtonCvarients2} initial="init1" animate="anim1"  style={{textAlign:"center",color:"green"}}>Image Uploaded</motion.p></div>:<motion.p variants={ButtonCvarients2} initial="init1" animate="anim1" className="maincolor" >Select Image For Preview</motion.p> }
                                             
                                       
                                         <motion.button type="submit" variants={btnHover} whileHover="hovers"  className="btn bttn btn-outline-primary">Upload Post</motion.button>

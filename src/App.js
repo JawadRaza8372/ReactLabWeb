@@ -31,11 +31,11 @@ useEffect(()=>{
 },[]);
 
   return (
-    <>
+    
 <NavRoutes status={user} data={posts}/>
 
 
-    </>
+    
   );
 }
 

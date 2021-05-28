@@ -71,7 +71,7 @@ else{
 
 
     return (
-        <>
+       
         <div className="herobg">
         <div className="m-5">
      <h1 style={{textAlign:"center",color:"white"}}> Category </h1> 
@@ -103,7 +103,7 @@ else{
   </div> </div> </div> </div> </div>
         </div>
 
-        </>
+        
     )}
 }
 

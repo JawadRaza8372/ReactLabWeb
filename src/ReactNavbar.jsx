@@ -4,10 +4,10 @@ import {Navbar,Nav,Button} from 'react-bootstrap';
 import "./index.css"
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Logo from "./images/logo.png"
-import {auth} from "./FirebaseConfig"
+import Loginnav from "./Loginnav";
 function ReactNavbar({userStatus}){
 
-return (<>
+return (<div>
  <Navbar style={{borderBottom:"2px solid #d1cdcd"}} collapseOnSelect expand="lg" bg="light" variant="light">
   <Navbar.Brand href="/home"><div style={{flexDirection:"row",display:"flex",marginLeft:"10px"}}>
   <img style={{objectFit:"contain",marginRight: ".5rem",alignSelf:"center"}} alt="logo" src={Logo}/>
@@ -21,13 +21,7 @@ return (<>
         <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/searchComponent">Search</NavLink>
 
         <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/about">About</NavLink>
-{ (userStatus)? <> <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/upload">Upload Component</NavLink>
-<NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6" to="/addCategory">Add Category</NavLink>
-<NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6" to="/ComponentMod">Update</NavLink>
-
-
-        <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6" onClick={()=>{auth.signOut()}}  to="">Logout</NavLink>
-</>:
+{ (userStatus)? <Loginnav/>:
  <NavLink style={{marginRight:"15px"}} exact activeClassName="active_class"    className="nav-link h6"  to="/login">Login</NavLink>
 
 }
@@ -35,6 +29,6 @@ return (<>
   </Navbar.Collapse>
 </Navbar>
  
-</>);
+</div>);
 }
 export default ReactNavbar;
