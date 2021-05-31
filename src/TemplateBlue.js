@@ -8,7 +8,7 @@ function TemplateBlue({children}) {
     <div className="row">
 <div className="col-8 mx-auto">
 <div className="row my-auto">
-<div style={{display: "flex",overflow:"hidden",justifyContent:"center",alignItems: "center",paddingBottom:"auto",paddingTop:"auto"}}>
+<div style={{display: "flex",overflow:"hidden",justifyContent:"center",alignItems: "center",paddingBottom:"auto",paddingTop:"auto",width:'100vw'}}>
 {children}
 </div>
 
