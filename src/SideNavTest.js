@@ -29,7 +29,7 @@ useEffect(()=>{
     <div style={{backgroundColor:"white",display:"flex",flexDirection:"row",justifyContent:"center",overflow:"hidden"}}>
     <div className="col-12">
       <div className="row">
-        <div className="col-xs-10 col-sm-10 col-md-2 col-lg-2 col-xl-2  order-1">
+        <div className="col-xs-10 col-sm-10 col-md-10 col-lg-3 col-xl-2  order-1">
         <div style={{overflowY:"auto",maxHeight:"89vh"}}>
         <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
 <div style={{display:"flex",flexDirection:"column"}}>
