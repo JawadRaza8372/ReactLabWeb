@@ -27,7 +27,7 @@ function UploadCategory({rexx}) {
         console.log(state);
         db.collection('menu').add({
           text:state.title,
-          path:"/"+state.title,
+          path:"/"+state.title.replace(/\s+/g, ''),
           para:state.para,
           
        }).then(()=>{console.log("------datasaved--posted---"); 
