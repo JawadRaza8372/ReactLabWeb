@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "aos": "^2.3.4",
     "axios": "^0.21.1",
-    "bootstrap": "^5.0.0-alpha1",
+    "bootstrap": "^5.0.2",
     "firebase": "^8.2.1",
     "framer-motion": "^4.0.0",
     "highlight.js": "^10.4.1",
@@ -21,10 +21,10 @@
     "react-bootstrap": "^1.4.0",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.13.1",
-    "react-firebase-file-uploader": "^2.4.3",
+    "react-firebase-file-uploader": "^2.4.4",
     "react-player": "^2.7.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^1.1.5",
+    "react-scripts": "^3.4.3",
     "react-syntax-highlighter": "^15.4.3"
   },
   "scripts": {
@@ -39,7 +39,6 @@
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
       "not op_mini all"
     ],
     "development": [
