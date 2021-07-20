@@ -21,12 +21,14 @@ AOS.init();
       }});
 
       
-},[]);     
-useEffect(()=>{
-  db.collection("menu").orderBy('text',"asc").get().then((snapshot)=>{
+},[]);  
+let fetcmenu=async()=>{
+  await db.collection("menu").orderBy('text',"asc").get().then((snapshot)=>{
     setposts(snapshot.docs.map(doc=>(({id:doc.id,post:doc.data()}))))
   })
-    
+}   
+useEffect(()=>{
+ fetcmenu()
 });
 
   return (
