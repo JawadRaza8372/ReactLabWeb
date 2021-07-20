@@ -7,7 +7,6 @@ function Footer(){
   const ButtonCvarients1={init1:{x:'100vw'},anim1:{x:0,transition:{delay:1,duration:2}}};
   const ButtonCvarients2={init1:{x:'100vw'},anim1:{x:0,transition:{delay:1.5,duration:2}}};
   const ButtonCvarients3={init1:{x:'100vw'},anim1:{x:0,transition:{delay:2,duration:2}}};
-  const ButtonCvarients4={init1:{y:'100vw'},anim1:{y:0,transition:{delay:3,duration:3}}};
   const containvarients={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}}};
   const exitDiv={animat:{x:"-100vw",transition:{duration:1,ease:"easeInOut"}}};
   const btnHover={hovers:{scale:1.1,transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}

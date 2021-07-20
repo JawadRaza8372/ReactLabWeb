@@ -1,7 +1,6 @@
 import React from "react";
 import CodeTemplate from "./CodeTemplate";
 import PostCodeTemplate from "./PostCodeTemplate";
-import UploadPost from "./UploadPost";
 import {motion} from "framer-motion"
 import {overpara} from "./sideManuItems"
 function About(){

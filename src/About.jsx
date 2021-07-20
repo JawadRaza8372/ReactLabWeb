@@ -9,7 +9,7 @@ function About(){
     return(<motion.div variants={exitDiv} exit="animat" initial="init" animate="anim">
       <CodeTemplate title="Getting Started" titlepara={para}>
 <PostCodeTemplate UseTitle="Installation" UsePara="Installing React Native Elements depends on your type of react native project."
- codee="yarn add react-native-elements" codee2="npm install react-native-elements">
+ codee="yarn add @umeraftab/reactlab" codee2="npm install @umeraftab/reactlab">
      <ul>
      <li>Expo | Create React Native App</li>
 <li>React Native CLI</li>
@@ -22,6 +22,17 @@ function About(){
          <li>yarn for Ios</li>
      </ul>
  </PostCodeTemplate>
+ <PostCodeTemplate
+          UseTitle="Install react-native-vector-icons"
+          UsePara="With create-react-native-app projects include react-native-vector-icons out of the box, hence this step can be skipped. if your project dont require Icons
+               "
+          codee="yarn add react-native-vector-icons"
+          codee2="npm install react-native-vector-icons"
+        />
+        <PostCodeTemplate
+          UsePara="Link the dependency <0.59"
+          codee="npx react-native link react-native-vector-icons"
+        />
       </CodeTemplate>
     </motion.div>);
 }

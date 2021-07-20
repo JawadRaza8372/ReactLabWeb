@@ -3,7 +3,7 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import CreateIcon from '@material-ui/icons/Create';
 import MyModel from './MyModel';
 import {motion} from "framer-motion"
-import {storage, db} from "./FirebaseConfig"
+import {db} from "./FirebaseConfig"
 
 function MiniCard({title,category,data}) {
     const [Udata,setUdata]=useState(data.post)

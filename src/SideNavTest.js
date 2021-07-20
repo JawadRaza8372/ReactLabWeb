@@ -1,20 +1,15 @@
 import React,{useEffect,useState} from 'react'
 import sideManuItems from "./sideManuItems"
-import {sideManuItem2,sideManuItem3} from "./sideManuItems"
-import {NavLink} from "react-router-dom";
+import {sideManuItem3} from "./sideManuItems"
 import {Navbar,Nav} from 'react-bootstrap';
-import AppsIcon from '@material-ui/icons/Apps';
 import "./index.css"
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Logo from "./images/logo.png"
 import NavLists,{NavLists2} from './NavLists';
 import ReactNavbar from "./ReactNavbar"
-import Footer from './Footer';
 import {motion} from "framer-motion"
 import {db} from "./FirebaseConfig";
 
 function SideNavTest({userStatus,children}) {
-  const ButtonCvarients2={init1:{y:'100vw'},anim1:{y:0,transition:{delay:3,duration:3}}};
 const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
 const exitDiv={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}},animat:{x:"-100vw",transition:{duration:1,ease:"easeInOut"}}};
 const [posts, setposts] = useState(null)

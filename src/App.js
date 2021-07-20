@@ -13,7 +13,6 @@ AOS.init();
   useEffect(()=>{
     auth.onAuthStateChanged((user) => {
         if (user) {
-          var uid = user.uid;
             setuser(user.uid);
           }
            else {

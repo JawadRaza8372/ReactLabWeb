@@ -1,8 +1,7 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import "./index.css";
-import {storage,auth, db} from "./FirebaseConfig"
-import {Redirect, useHistory} from "react-router-dom"
-import Template from './Template';
+import {auth} from "./FirebaseConfig"
+import {Redirect} from "react-router-dom"
 import TemplateBlue from './TemplateBlue';
 import {Row,Toast} from "react-bootstrap"
 
@@ -10,7 +9,6 @@ import {motion} from "framer-motion"
 function Login({rexx}) {
 
     const [state, setstate] = useState({email:null,password:null});
-    const [suser,setuser]=useState(null);
     const [success, setSuccess] = useState(null);
     const [failure, setfailure] = useState(null);
     const [showtost, setClose] = useState(false);
@@ -19,7 +17,6 @@ function Login({rexx}) {
     const btnHover={hovers:{scale:1.1,textShadow:"0px 0px 8px rgb(255,255,255)",transition:{yoyo:Infinity,duration:0.4,type:"spring",stiffness:520}}}
     const exitDiv={init:{x:'-100vw'},anim:{x:0,transition:{duration:1}},animat:{x:"-100vw",transition:{duration:1,ease:"easeInOut"}}};
 
-    const [Error, setError] = useState(null)
   const handlein=(e)=>{
         const name=e.target.id;
         const value=e.target.value;

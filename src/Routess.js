@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import {Route,Switch,Redirect,useLocation} from "react-router-dom";
 import Contact from "./Contact";
 import About from "./About";
