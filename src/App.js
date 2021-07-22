@@ -27,9 +27,12 @@ let fetcmenu=async()=>{
     setposts(snapshot.docs.map(doc=>(({id:doc.id,post:doc.data()}))))
   })
 }   
+console.log(posts)
 useEffect(()=>{
  fetcmenu()
+ 
 });
+
 
   return (
     
