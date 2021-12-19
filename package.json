@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
+    "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -23,9 +24,11 @@
     "react-dom": "^16.13.1",
     "react-firebase-file-uploader": "^2.4.4",
     "react-player": "^2.7.0",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
-    "react-syntax-highlighter": "^15.4.3"
+    "react-syntax-highlighter": "^15.4.3",
+    "redux": "^4.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
