@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { auth } from "../FirebaseConfig";
-
+import { useDispatch } from "react-redux";
+import { setUser } from "../store/authSlice";
 function Loginnav() {
+  const dispatch = useDispatch();
   return (
     <React.Fragment>
       <NavLink
@@ -39,6 +41,7 @@ function Loginnav() {
         className="nav-link h6"
         onClick={() => {
           auth.signOut();
+          dispatch(setUser({ user: null }));
         }}
         to=""
       >

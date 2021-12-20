@@ -245,7 +245,6 @@ function MiniCard({ title, category, data }) {
                 <button
                   style={{ marginRight: "10px" }}
                   className="btn btn-outline-success"
-                  style={{ marginRight: "10px" }}
                   onClick={delate}
                 >
                   Yes

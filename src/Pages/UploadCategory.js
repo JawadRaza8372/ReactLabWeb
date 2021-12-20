@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { db } from "../FirebaseConfig";
-import { Redirect } from "react-router-dom";
 import TemplateBlue from "../Components/TemplateBlue";
 import { motion } from "framer-motion";
 import Toaster from "../Components/Toaster";

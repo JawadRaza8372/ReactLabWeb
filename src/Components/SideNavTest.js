@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import sideManuItems from "./sideManuItems";
 import { sideManuItem3 } from "./sideManuItems";
 import { Navbar, Nav } from "react-bootstrap";
 import NavLists, { NavLists2 } from "./NavLists";
 import ReactNavbar from "../Navigation/ReactNavbar";
 import { motion } from "framer-motion";
-import { db } from "../FirebaseConfig";
 import { useSelector } from "react-redux";
 
 function SideNavTest({ userStatus, children }) {

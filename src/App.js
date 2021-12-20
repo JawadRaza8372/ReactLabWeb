@@ -10,7 +10,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { setcodeSni } from "./store/codeSniSlice";
 import { setUser } from "./store/authSlice";
 function App() {
-  const [user, setuser] = useState(null);
   const [posts, setposts] = useState(null);
   const [menu, setmenu] = useState(null);
   const dispatch = useDispatch();
@@ -21,14 +20,12 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        setuser(user.uid);
         dispatch(setUser({ user: user.uid }));
       } else {
-        setuser(null);
-        console.log("   ------datasave--error---");
+        console.log("nouser");
       }
     });
-  }, []);
+  }, [dispatch]);
   let fetcmenu = async () => {
     await db
       .collection("menu")
@@ -63,7 +60,7 @@ function App() {
     fetcpost();
   }, []);
 
-  return <NavRoutes status={user} data={posts} />;
+  return <NavRoutes />;
 }
 
 export default App;
